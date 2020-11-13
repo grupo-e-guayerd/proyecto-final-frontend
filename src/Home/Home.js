@@ -1,10 +1,12 @@
 import React from "react"
-import Carousel from "./Carousel/.js"
+import Banner from "./Carousel/Banner.js"
 
 export default class Home extends React.Component{
     render (){
         return( 
-            <Carousel></Carousel>
+            <div>
+                <Banner></Banner> <br/><br/>
+            </div>
         )
     }
 }
