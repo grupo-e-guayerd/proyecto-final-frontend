@@ -70,6 +70,7 @@
   right: 0;
 }
 
+
 .card-job {
   color: silver;
   margin-top: -20px;
@@ -118,3 +119,14 @@
   object-fit: cover;
   width: 100%;
 }
+
+.d-block
+{
+  filter:saturate(70%)
+}
+
+.button-search{
+  background-color:#14274e;
+  color: white;
+}
+
