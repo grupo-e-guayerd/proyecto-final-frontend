@@ -4,6 +4,7 @@ export default class Ranking extends React.Component{
     render (){
         return(
             <>
+                <h2></h2>
             </>
         )
     }

@@ -39,10 +39,25 @@
 
 .d-block
 {
-  filter:saturate(70%)
+  filter:saturate(70%);
+  height: 700px;
+
 }
 
 .button-search{
   background-color:#14274e;
   color: white;
+}
+
+.footerGeneral{
+  background-color: black;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 200;
+  text-align: center;
+  padding: 40px;
+  margin-top: 80px;
+  width: 100%;
+  align-items: flex-end;
 }
