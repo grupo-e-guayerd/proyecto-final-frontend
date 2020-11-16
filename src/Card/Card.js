@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 class Card extends Component {
     render() {
+        /* TODO Este componente debe recibir un objeto con los datos de un profesional */
         return (
             <>
                 {/* CARD COMPONENT */}

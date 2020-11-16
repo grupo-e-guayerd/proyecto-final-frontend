@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 
 class CardList extends Component {
     render() {
+        /* TODO Este componente debe recibir un array de profesionales */
         return (
             <>
                 <div className="card-list">
