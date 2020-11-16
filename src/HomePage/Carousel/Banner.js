@@ -4,8 +4,8 @@ import Search from "../Search/Search"
 
 export default class Banner extends React.Component
 {
-    render () {
-      return( 
+    render() {
+      return ( 
         <Carousel>
           <Carousel.Item>
             <img
