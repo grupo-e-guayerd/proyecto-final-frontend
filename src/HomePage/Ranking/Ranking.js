@@ -1,5 +1,5 @@
 import React from "react"
-import CardList from "../../CardList/CardList"
+import CardList from "../../components/CardList/CardList"
 
 export default class Ranking extends React.Component 
 {

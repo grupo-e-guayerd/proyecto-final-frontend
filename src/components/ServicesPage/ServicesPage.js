@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CardList from "../CardList/CardList";
+import SideBar from "../SideBar/SideBar";
 
 
 export default class ServicesPage extends Component
@@ -19,7 +20,10 @@ export default class ServicesPage extends Component
 
     render() {
         return (
-            <CardList />
+            <div className="service-page-container">
+                <SideBar />
+                <CardList />
+            </div>
         )
     }
 }

@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import HomePage from "./HomePage/HomePage.js"
 import './App.css';
-import Footer from "./Footer/Footer.js";
-import NavBar from "./NavBar/NavBar";
-import AboutUsPage from "./AboutUsPage/AboutUPage.js";
-import ServicesPage from "./ServicesPage/ServicesPage.js";
+import Footer from "./components/Footer/Footer.js";
+import NavBar from "./components/NavBar/NavBar";
+import AboutUsPage from "./components/AboutUsPage/AboutUsPage";
+import ServicesPage from "./components/ServicesPage/ServicesPage.js";
 
 export default class App extends React.Component
 {

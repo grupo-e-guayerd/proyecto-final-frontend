@@ -51,6 +51,10 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+/* .navbar-navlink-GE {
+  color: orange;
+} TODO-------------------------------*/
+
 .navbar-navlink-GE:hover {
   color: white;
   text-decoration: underline;
@@ -226,4 +230,52 @@ body::-webkit-scrollbar-thumb {
 
 .carousel-caption {
   padding: 0px 15px;
+}
+
+/* SIDEBAR COMPONENT */
+.service-page-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  padding-top: 4.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 200px;
+}
+
+.sidebar-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  font-size: .9rem;
+  margin-bottom: .6rem;
+  outline: none;
+  padding-left: 1.2rem;
+  text-align: left;
+  transition: all .5s ease;
+}
+
+.sidebar-button:hover {
+  color: orange;
+  margin-left: .5rem;
+}
+
+.sidebar-availables {
+  color: rgba(192, 192, 192, 0.774);
 }

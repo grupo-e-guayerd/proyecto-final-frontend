@@ -14,6 +14,7 @@ export default class GoogleMap extends Component
                 allowFullScreen 
                 aria-hidden="false" 
                 tabIndex={0}
+                title="Google maps"
             />
         )
     }

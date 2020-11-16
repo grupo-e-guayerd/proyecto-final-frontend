@@ -25,8 +25,8 @@ class Card extends Component {
                             <i className="fas fa-star" />
                             <i className="fas fa-star" />
                             <i className="fas fa-star" />
-                            <i class="fas fa-star-half-alt" />
-                            <i class="far fa-star" />
+                            <i className="fas fa-star-half-alt" />
+                            <i className="far fa-star" />
                         </span>
 
                         <p className="card-description-GE">
