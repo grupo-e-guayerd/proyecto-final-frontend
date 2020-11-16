@@ -6,7 +6,7 @@ class CardList extends Component {
         /* TODO Este componente debe recibir un array de profesionales */
         return (
             <>
-                <div className="card-list">
+                <div className="card-list-GE">
 
                     <Card />
                     <Card />

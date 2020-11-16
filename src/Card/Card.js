@@ -7,23 +7,32 @@ class Card extends Component {
         return (
             <>
                 {/* CARD COMPONENT */}
-                <div className="card">
+                <div className="card-GE">
                     {/* CARD IMAGE */}
-                    <div className="card-img-container">
-                        <img src="https://www.machinecurve.com/wp-content/uploads/2019/07/thispersondoesnotexist-1.jpg" alt="worker" className="card-img" />
+                    <div className="card-img-container-GE">
+                        <img src="https://www.machinecurve.com/wp-content/uploads/2019/07/thispersondoesnotexist-1.jpg" alt="worker" className="card-img-GE" />
                     </div>
 
                     {/* CARD INFO */}
-                    <div className="card-info">
-                        <h3 className="card-name">Carlos Perez <span className="card-price">$400/h</span></h3>
-                        <h4 className="card-job">Plomero</h4>
-                        <span className="card-rating">
-                            <i className="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <div className="card-info-GE">
+                        <h3 className="card-name-GE">
+                            <span>Carlos Pérez</span>
+                            <span className="card-price-GE">$400/h</span>
+                        </h3>
+                        <h4 className="card-job-GE">Plomero</h4>
+                       
+                        <span className="card-rating-GE">
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i class="fas fa-star-half-alt" />
+                            <i class="far fa-star" />
                         </span>
-                        <p className="card-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate consectetur erat.
+
+                        <p className="card-description-GE">
+                            Hola soy Carlos, soy plomero y cobro $400 la hora, me gusta el modo oscuro, también soy gasista, chofer y martillero público.
                         </p>
-                        <NavLink className="card-profile" to="/profile">Ver perfil</NavLink>
+                        <NavLink className="card-profile-GE" to="/profile">Ver perfil</NavLink>
                     </div>
                 </div>
             </>

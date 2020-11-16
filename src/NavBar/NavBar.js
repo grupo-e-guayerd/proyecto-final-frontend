@@ -6,18 +6,18 @@ class NavBar extends Component {
         return (
             <>
                 {/* NAVBAR COMPONENT */}
-                <nav className="navbar">
+                <nav className="navbar-GE">
                     {/* NAVBAR TITLE */}
-                    <div className="navbar-title">
+                    <div className="navbar-title-GE">
                         
                         <h1><i class="fas fa-tools"></i> TituloApp</h1>
                     </div>
 
                     {/* NAVBAR LINKS */}
-                    <div className="navbar-links">
-                        <NavLink exact to="/" className="navbar-navlink">Home</NavLink>
-                        <NavLink exact to="/servicios" className="navbar-navlink">Servicios</NavLink>
-                        <NavLink exact to="/nosotros" className="navbar-navlink">Nosotros</NavLink>
+                    <div className="navbar-links-GE">
+                        <NavLink exact to="/" className="navbar-navlink-GE">Home</NavLink>
+                        <NavLink exact to="/servicios" className="navbar-navlink-GE">Servicios</NavLink>
+                        <NavLink exact to="/nosotros" className="navbar-navlink-GE">Nosotros</NavLink>
                     </div>
                 </nav>
             </>
