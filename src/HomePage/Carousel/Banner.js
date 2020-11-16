@@ -10,12 +10,12 @@ export default class Banner extends React.Component
           <Carousel.Item>
             <img
               className="d-block w-100" 
-              src="https://www.tecsaqro.com.mx/wp-content/uploads/2019/04/diferencia-electricista-tecnico-electricista.jpg"
+              src="https://cimg2.ibsrv.net/cimg/www.doityourself.com/1049x700_85/18/screwdriver-288018.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Contrate un profesional</h3>
+              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -27,8 +27,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Contrate un profesional</h3>
+              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -40,8 +40,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Contrate un profesional</h3>
+              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -49,12 +49,12 @@ export default class Banner extends React.Component
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://www.servihogar-ecija.com/wp-content/uploads/2019/11/trabajos-de-albaileria.jpg"
+              src="https://www.tecsaqro.com.mx/wp-content/uploads/2019/04/diferencia-electricista-tecnico-electricista.jpg"
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Four slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Contrate un profesional</h3>
+              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -62,12 +62,12 @@ export default class Banner extends React.Component
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://www.servihogar-ecija.com/wp-content/uploads/2019/11/trabajos-de-albaileria.jpg"
+              src="https://muchosnegociosrentables.com/wp-content/uploads/2017/06/C%C3%B3mo-iniciar-un-servicio-de-fontanero-o-plomero.jpg"
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Five slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h3>Contrate un profesional</h3>
+              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>

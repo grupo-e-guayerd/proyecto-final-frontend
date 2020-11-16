@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
 
 .d-block
 {
-  filter:brightness(30%);
+  filter:brightness(35%);
   height: 78vh;
   object-fit: cover;
 }
