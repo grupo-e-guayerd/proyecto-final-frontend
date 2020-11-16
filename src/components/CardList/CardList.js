@@ -3,36 +3,28 @@ import Card from "../Card/Card";
 
 class CardList extends Component {
     render() {
-        /* TODO Este componente debe recibir un array de profesionales */
+        const { arrayResponse } = this.props;
         return (
             <>
                 <div className="card-list-GE">
-
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    
-                    
-
-                    {/* {
-                        arrayWorkers && (
-                            arrayWorkers.map(worker => {
-                                <Card 
-                                    mame={worker.name} 
-                                    price={worker.price}
-                                    job={worker.job} 
-                                    rating={worker.rating} 
-                                    description={worker.description}
-                                    id={worker.id}
-                                    img={worker.img}
+                    {console.log(arrayResponse)}
+                    {
+                        arrayResponse && (
+                            arrayResponse.map(professional=>{
+                                return <Card 
+                                    name={professional.name} 
+                                    hourPrice={professional.hourPrice}
+                                    job={professional.job} 
+                                    rating={professional.rating} 
+                                    description={professional.description}
+                                    currency={professional.currency}
+                                    id={professional.id}
+                                    imgUrl={professional.imgUrl}
                                 />
+                                console.log("vuelta")
                             })
                         )
-                    } */}
+                    }
                 </div>
             </>
         );
