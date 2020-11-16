@@ -1,10 +1,21 @@
 /* GENERAL styles */
-p {
-  text-align: justify;
+body {
+  background-color: rgb(12, 12, 12);
+  color:white;
+}
+
+body::-webkit-scrollbar {
+  background-color: grey;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 5px;
 }
 
 /* NAVBAR COMPONENT */
-.navbar {
+.navbar-GE {
   align-items: center;
   background-color: rgb(0, 0, 0);
   box-shadow: 5px 0 5px black;
@@ -16,23 +27,23 @@ p {
   z-index: 1000;
 }
 
-.navbar-title,
-.navbar-links {
-  padding: 0px 10px;
+.navbar-title-GE,
+.navbar-links-GE {
+  padding: 10px 10px;
 }
 
-.navbar-title {
+.navbar-title-GE {
   color: white;
   font-size: 1.2rem;
   font-weight: 800;
   margin-left: 2rem;
 }
 
-.navbar-links {
+.navbar-links-GE {
   margin-right: 2rem;
 }
 
-.navbar-navlink {
+.navbar-navlink-GE {
   color: white;
   font-size: 1.4rem;
   font-weight: 600;
@@ -40,75 +51,90 @@ p {
   text-decoration: none;
 }
 
-.navbar-navlink:hover {
+.navbar-navlink-GE:hover {
   color: white;
   text-decoration: underline;
 }
 
 /* CARD COMPONENT */
-.card {
-  box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.479);
+.card-GE {
+  color: rgba(253, 238, 208, 0.938);
+  background-color: rgb(20, 20, 20);
+  box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.226);
   border-radius: 10px;
-  border: 1px solid rgba(211, 211, 211, 0.836);
   transition: all .5s ease;
   position: relative;
   width: auto;
 }
 
-.card:hover {
+.card-GE:hover {
   transform: scale(1.02);
 }
 
-.card-info {
-  padding: 5px 10px 10px 10px;
+.card-info-GE {
+  padding: 15px 20px 10px 20px;
 }
 
-.card-name {
+.card-name-GE {
+  color: white;
+  display: flex;
+  justify-content: space-between;
   font-size: 1.2rem;
   position: relative;
 }
 
-.card-price {
-  color: black;
+.card-rating-GE {
+  font-size: 1.1rem;
+}
+
+.card-price-GE {
+  padding-top: 3px;
+  color:  orange;
   font-weight: 400;
-  position: absolute;
-  right: 0;
 }
 
 
-.card-job {
-  color: silver;
-  margin-top: -20px;
+.card-job-GE {
+  font-size: 1rem;
+  color: rgb(126, 126, 126);
+  margin-top: -10px;
 }
 
 .fas, .far {
   color: orange;
 }
 
-.card-description {
-  padding-bottom: 2.5rem;
+.card-description-GE {
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+  text-align: justify;
 }
 
-.card-profile {
+.card-profile-GE {
   border-radius: 4px;
-  color: white;
+  color: black;
+  font-weight: 500;
   display: inline-block;
-  background-color: black;
+  background-color: orange;
   padding: 5px 20px;
   text-decoration: none;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  margin-top: 1rem;
 }
 
-.card-profile:hover {
-  opacity: .9;
+.card-profile-GE:hover {
+  /* opacity: .8; */
+  background-color: rgb(238, 182, 0);
+  box-shadow: 0 0 3px orange;
+  color: black;
+  text-decoration: none;
 }
 
 
 /* CARDLIST COMPONENT */
-.card-list {
+.card-list-GE {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
@@ -117,7 +143,7 @@ p {
   padding: 5rem 0 5rem 0;
 }
 
-.card-img {
+.card-img-GE {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 200px;
@@ -127,14 +153,33 @@ p {
 
 .d-block
 {
-  filter:saturate(70%);
-  height: 700px;
+  filter:brightness(30%);
+  height: 78vh;
+  object-fit: cover;
+}
 
+.form-control {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1px solid orange;
+  box-shadow: 0 0 10px orange !important;
 }
 
 .button-search{
-  background-color:#14274e;
-  color: white;
+  background-color: orange;
+  color: black;
+  font-size: 1rem;
+  font-weight: 630;
+}
+
+.button-search:hover {
+  background-color: orange;
+  color: black;
+  opacity: 0.8;
 }
 
 .footerGeneral{
@@ -162,7 +207,23 @@ p {
   font-size: 1.2rem;
 }
 
+.aboutUs-container h2 {
+  margin-top: 6rem;
+}
+
 .aboutUs-container p.our-description {
-  margin-top: 1vh;
-  margin-bottom: 10vh;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.aboutUs-container p.address {
+  margin-top: 2rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.carousel-caption {
+  padding: 0px 15px;
 }
