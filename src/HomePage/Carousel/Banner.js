@@ -14,8 +14,8 @@ export default class Banner extends React.Component
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>Contrate un profesional</h3>
-              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
+              <h3 className="banner-title">Contrate un profesional</h3>
+              {/* <p className="slogan">Disponibles las 24hs, con precios super accesibles</p> */}
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -27,8 +27,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Contrate un profesional</h3>
-              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
+              <h3 className="banner-title">Contrate un profesional</h3>
+              {/* <p className="slogan">Disponibles las 24hs, con precios super accesibles</p> */}
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -40,8 +40,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Contrate un profesional</h3>
-              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
+              <h3 className="banner-title">Contrate un profesional</h3>
+              {/* <p className="slogan">Disponibles las 24hs, con precios super accesibles</p> */}
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -53,8 +53,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Contrate un profesional</h3>
-              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
+              <h3 className="banner-title">Contrate un profesional</h3>
+              {/* <p className="slogan">Disponibles las 24hs, con precios super accesibles</p> */}
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>
@@ -66,8 +66,8 @@ export default class Banner extends React.Component
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Contrate un profesional</h3>
-              <p className="slogan">Disponibles las 24hs, con precios super accesibles</p>
+              <h3 className="banner-title">Contrate un profesional</h3>
+              {/* <p className="slogan">Disponibles las 24hs, con precios super accesibles</p> */}
               <Search></Search>
             </Carousel.Caption>
           </Carousel.Item>

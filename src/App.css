@@ -39,6 +39,10 @@ body::-webkit-scrollbar-thumb {
   margin-left: 2rem;
 }
 
+.navbar-title-main {
+  font-size: 2rem;
+}
+
 .navbar-links-GE {
   margin-right: 2rem;
 }
@@ -278,4 +282,9 @@ body::-webkit-scrollbar-thumb {
 
 .sidebar-availables {
   color: rgba(192, 192, 192, 0.774);
+}
+
+.banner-title {
+  font-size: 3rem;
+  padding-bottom: 4rem;
 }

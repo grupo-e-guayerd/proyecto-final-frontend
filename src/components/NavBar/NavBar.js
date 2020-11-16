@@ -10,7 +10,7 @@ class NavBar extends Component {
                     {/* NAVBAR TITLE */}
                     <div className="navbar-title-GE">
                         
-                        <h1><i className="fas fa-tools"></i> TituloApp</h1>
+                        <h1 className="navbar-title-main"><i className="fas fa-tools"></i> ServiOficios</h1>
                     </div>
 
                     {/* NAVBAR LINKS */}
