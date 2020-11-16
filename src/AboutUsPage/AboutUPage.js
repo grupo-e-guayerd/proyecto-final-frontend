@@ -28,9 +28,9 @@ export default class AboutUsPage extends Component
                 <p className="our-description">
                     {this.state.ourDescription}
                 </p>
+
+                <h2>Dirección</h2>
                 <p className="address">
-                    <strong>Dirección</strong>
-                    <br />
                     Av. Patricio Peralta Ramos 3532, 7600, Mar del Plata, Buenos Aires.
                 </p>
                 <GoogleMap />
