@@ -14,7 +14,7 @@ export default class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3001/professionals")
+        fetch("https://api-servi-oficios.herokuapp.com/professionals")/* TODO */
             .then((response) => response.json())
             .then((jsonResponse) => { this.setState({ arrayResponse: jsonResponse }) })
             .catch((error) => { /* TODO catch handler */ });
