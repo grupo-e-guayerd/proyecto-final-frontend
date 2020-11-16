@@ -12,6 +12,11 @@ export default class ServicesPage extends Component
         }
     }
 
+    componentDidMount()
+    {
+        
+    }
+
     render() {
         return (
             <CardList />
