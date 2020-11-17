@@ -8,10 +8,11 @@ export default class Search extends React.Component{
         return(
             <div>
                 <InputGroup className="mb-3">
-                    <FormControl
-                    placeholder="Busca el oficio deseado"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
+                    <FormControl 
+                        className="carousel-search"
+                        placeholder="Busca el oficio deseado"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
                     />
                     <InputGroup.Append>
                     <Button className="button-search" variant="outline-secondary">Buscar</Button>

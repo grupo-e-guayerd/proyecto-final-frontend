@@ -177,13 +177,6 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 10px orange !important;
 }
 
-.button-search{
-  background-color: orange;
-  color: black;
-  font-size: 1rem;
-  font-weight: 630;
-}
-
 .button-search:hover {
   background-color: orange;
   color: black;
@@ -285,6 +278,36 @@ body::-webkit-scrollbar-thumb {
 }
 
 .banner-title {
-  font-size: 3rem;
+  font-size: 5rem;
   padding-bottom: 4rem;
 }
+
+.rating-title{
+  margin: auto;
+  margin-top:8rem;
+  text-align:center;
+}
+
+.carousel{
+  width: 100%;
+}
+.carousel-caption{
+  position: absolute;
+  top:50%;
+  left:15%;
+  z-index: 10;
+}
+
+.carousel-search{
+  padding: 30px 20px;
+  font-size: 1.5rem;
+}
+
+.button-search{
+  background-color: orange;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 630;
+  padding: 10px 20px;
+}
+

@@ -25,7 +25,7 @@ export default class ServicesPage extends Component
         return (
             <div className="service-page-container">
                 <SideBar />
-                <CardList arrayResponse={this.state.arrayResponse} />
+                <CardList arrayProfessionals={this.state.arrayResponse} />
             </div>
         )
     }

@@ -13,18 +13,17 @@ export default class HomePage extends React.Component {
         }
     }
 
-    componentDidMount() {
-        fetch("https://api-servi-oficios.herokuapp.com/professionals")/* TODO */
+/*     componentDidMount() {
+        fetch("https://api-servi-oficios.herokuapp.com/professionals")
             .then((response) => response.json())
             .then((jsonResponse) => { this.setState({ arrayResponse: jsonResponse }) })
-            .catch((error) => { /* TODO catch handler */ });
-    }
+            .catch((error) => { });
+    } */
 
     render() {
         return (
             <div>
                 <Banner />
-                <CardList arrayResponse={this.state.arrayResponse} />
                 <Ranking />
             </div>
         )

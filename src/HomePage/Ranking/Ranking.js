@@ -10,18 +10,38 @@ export default class Ranking extends React.Component
         }
     }
 
+    orderRating=(array)=>{
+        array.sort(function(a,b){
+            if(a.rating < b.rating){
+                return 1;
+            }
+            if(a.rating > b.rating){
+                return -1;
+            }
+            return 0;
+        })
+    }   
+
     componentDidMount()
     {
-        /* TODO Request data from the server. 
-            Se van pedir los profesionales registrados y se van a agregar al arreglo del estado los (por ejemplo)
-            20 con mejor ranking, */
+        fetch("https://api-servi-oficios.herokuapp.com/professionals") /* TODO */
+        .then((response)=>response.json())
+        .then((jsonResponse)=>{
+            this.orderRating(jsonResponse);
+            const bestProfessionals = [];
+            for ( let i = 0; i < 6; i++){
+                bestProfessionals.push(jsonResponse[i]);
+            }
+            this.setState({arrayMostPopulars: bestProfessionals})
+        })
+        .catch((error)=>{ /* TODO catch handler */ });
     }
 
     render (){
         return (
             <>
-                <h2>{/* TODO */}</h2>
-                <CardList arrayMostPopulars={this.state.arrayMostPopulars} />
+                <h2 className = "rating-title">Algunos de nuestros mejores profesionales</h2>
+                <CardList arrayProfessionals={this.state.arrayMostPopulars}></CardList>
             </>
         )
     }
