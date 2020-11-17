@@ -3,23 +3,23 @@ import Card from "../Card/Card";
 
 class CardList extends Component {
     render() {
-        const { arrayProfessionals } = this.props;
+        const { arrayWorkersToShow } = this.props;
         return (
             <>
                 <div className="card-list-GE">
                     {
-                        arrayProfessionals && (
-                            arrayProfessionals.map(professional=>{
+                        arrayWorkersToShow && (
+                            arrayWorkersToShow.map(worker=>{
                                 return <Card 
-                                    name={professional.name} 
-                                    hourPrice={professional.hourPrice}
-                                    job={professional.job} 
-                                    rating={professional.rating} 
-                                    description={professional.description}
-                                    currency={professional.currency}
-                                    id={professional.id}
-                                    imgUrl={professional.imgUrl}
-                                    key={professional._id}
+                                    name={worker.name} 
+                                    hourPrice={worker.hourPrice}
+                                    job={worker.job} 
+                                    rating={worker.rating} 
+                                    description={worker.description}
+                                    currency={worker.currency}
+                                    id={worker.id}
+                                    imgUrl={worker.imgUrl}
+                                    key={worker._id}
                                 />
                                 console.log("vuelta")
                             })

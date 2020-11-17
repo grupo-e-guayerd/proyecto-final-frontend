@@ -1,5 +1,5 @@
 import React from "react"
-import CardList from "../../components/CardList/CardList"
+import CardList from "../CardList/CardList"
 
 export default class Ranking extends React.Component 
 {
@@ -41,7 +41,7 @@ export default class Ranking extends React.Component
         return (
             <>
                 <h2 className = "rating-title">Algunos de nuestros mejores profesionales</h2>
-                <CardList arrayProfessionals={this.state.arrayMostPopulars}></CardList>
+                <CardList arrayWorkersToShow={this.state.arrayMostPopulars}></CardList>
             </>
         )
     }

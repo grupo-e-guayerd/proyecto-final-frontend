@@ -4,6 +4,12 @@ import Search from "../Search/Search"
 
 export default class Banner extends React.Component
 {
+
+  searchHandler = ()=>{
+    /* TODO link to="/servicios"*/
+    alert("Redefirigir a Servicios y mostrar resultados.");
+  }
+
     render() {
       return ( 
         <>
@@ -48,9 +54,13 @@ export default class Banner extends React.Component
               />
             </Carousel.Item>
           </Carousel>
+
           <div className="carousel-caption">
             <h3 className="banner-title">¿Qué necesitas?</h3>
-            <Search></Search>
+            <Search 
+              placeholder="Busca el oficio deseado" 
+              searchHandler={this.searchHandler}
+            />
           </div>
         </>  
       )

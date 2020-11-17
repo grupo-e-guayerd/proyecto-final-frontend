@@ -148,7 +148,6 @@ body::-webkit-scrollbar-thumb {
   gap: 3rem;
   max-width: 1024px;
   margin: auto;
-  padding: 5rem 0 5rem 0;
 }
 
 .card-img-GE {
@@ -286,6 +285,7 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   margin-top:8rem;
   text-align:center;
+  padding-bottom: 5rem;
 }
 
 .carousel{
@@ -298,16 +298,36 @@ body::-webkit-scrollbar-thumb {
   z-index: 10;
 }
 
-.carousel-search{
-  padding: 30px 20px;
-  font-size: 1.5rem;
+.search{
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  width: 90%;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  outline: none;
 }
 
-.button-search{
+.button-search {
   background-color: orange;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 630;
   padding: 10px 20px;
+  width: 10%;
+  border: none;
+  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
+  outline: none;
+}
+
+.button-search:focus {
+  outline: none;
+}
+
+.services-box-GE {
+  padding-top: 5rem;
+}
+.search-services-container {
+  padding-bottom: 2.3rem;
 }
 
