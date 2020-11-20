@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 class Card extends Component {
     render() {
-        let { id, imgUrl, name, currency, hourPrice, job, rating, description } = this.props;
+        let { imgUrl, name, currency, hourPrice, job, rating, description } = this.props;
         return (
             <>
                 {/* CARD COMPONENT */}
