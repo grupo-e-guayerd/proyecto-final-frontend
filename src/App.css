@@ -184,7 +184,7 @@ body::-webkit-scrollbar-thumb {
 
 .footerGeneral{
   background-color: black;
-  color: #FFFFFF;
+  color: silver;
   font-size: 20px;
   font-style: italic;
   font-weight: 200;
@@ -327,7 +327,9 @@ body::-webkit-scrollbar-thumb {
 .services-box-GE {
   padding-top: 5rem;
 }
+
 .search-services-container {
   padding-bottom: 2.3rem;
+  width: 1024px;
 }
 

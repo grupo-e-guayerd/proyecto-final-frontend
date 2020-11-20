@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../Carousel/Banner";
+import Banner from "../Banner/Banner";
 import Ranking from "../Ranking/Ranking";
 
 
