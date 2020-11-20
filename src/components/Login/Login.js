@@ -5,9 +5,9 @@ export default class Login extends React.Component {
    
     render(){
         return(
-            <div>
-                <Link to="/loginUser"><button>¿Sos Usuario?</button></Link>
-                <Link to="/loginProfessional"><button>¿Sos Profesional?</button></Link>
+            <div className="login-container-button">
+                <Link to="/loginUser"><button className="login-button-principal">¿Sos Usuario?</button></Link>
+                <Link to="/loginProfessional"><button className="login-button-principal">¿Sos Profesional?</button></Link>
             </div>
         
         )

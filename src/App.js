@@ -33,6 +33,7 @@ export default class App extends React.Component
             
             <Route exact path="/signupUser"><SignupUser /></Route>
             <Route exact path="/signupProfessional"><SignupProfessional /></Route>
+            
             <Route path="/*">{/* TODO NotFoundPage */}</Route>
           </Switch>
           <Footer/>
