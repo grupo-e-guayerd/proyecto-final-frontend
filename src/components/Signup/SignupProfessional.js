@@ -65,7 +65,7 @@ export default class SignupProfessional extends React.Component {
 
 
     render(){
-        const {categories , name , job , imgUrl , hourPrice , currency , zone , description } = this.state
+        const {categories , name  , imgUrl , hourPrice  , zone , description } = this.state
         return(
             <>
 
