@@ -339,11 +339,14 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
   padding: 2rem;
   max-width: 500px;
   background-color: white;
   border-radius: 5px;
 }
+
 
 .input-user, .input-pass {
   width: 100%;
@@ -374,8 +377,61 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.login-container-button{
+  display: flex;
+  flex-direction:column;
+  margin: auto ;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+
+  max-width: 500px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.login-button-principal-1 {
+  display: flex;
+  flex-direction:  column;
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 6rem 0.6rem 6rem ;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.login-button-principal-2{
+  display: flex;
+  flex-direction:  column;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  padding: 0.6rem 6rem 0.6rem 6rem ;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.login-button-principal-2:hover, .login-button-principal-1:hover{
+  background-color: rgba(0, 0, 0, 0.945)
+}
+
+.login-title-principal{
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top:2rem;
+  margin-bottom: 3rem;
+  color:orange;
+  text-align: center;
+}
+
 /* SIGNUP */
-.add-professional {
+.signup-professional {
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -385,15 +441,45 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.add-input , .add-textarea {
+.signup-input , .signup-textarea {
   width: 100%;
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 5px;
   background-color: white;
   border: 1px solid black;
 }
 
-.add-input:focus , .add-textarea:focus {
+.signup-label {
+  color: black;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: rgb(240, 159, 9);
+  text-align: center;
+}
+
+.signup-input:focus , .signup-textarea:focus {
   background-color: rgba(192, 192, 192, 0.164);
+}
+
+.signup-button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;   
+}
+
+.send-request-success {
+  text-align: center;
+  color: green;
+  font-weight: 600;
+  font-size: 1.5rem;
 }

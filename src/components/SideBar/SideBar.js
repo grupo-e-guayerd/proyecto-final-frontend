@@ -29,6 +29,11 @@ export default class SideBar extends Component {
                         Jardinería
                         <span className="sidebar-availables"> (150)</span>
                     </button>
+                    <button className="sidebar-button">
+                        Mecánica
+                        <span className="sidebar-availables"> (150)</span>
+                    </button>
+                    
                 </div>
             </aside>
         );
