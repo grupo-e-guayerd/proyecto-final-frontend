@@ -16,7 +16,11 @@ class Card extends Component {
                     {/* CARD INFO */}
                     <div className="card-info-GE">
                         <h3 className="card-name-GE">
-                            <span>{name}</span>
+                            <span>{
+                                name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
+                                + " " 
+                                + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
+                            }</span>
                             <span className="card-price-GE">{currency.toUpperCase()} ${hourPrice}/h</span>
                         </h3>
                         <h4 className="card-job-GE">{job[0].toUpperCase()+job.slice(1)}</h4>
