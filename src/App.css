@@ -333,3 +333,67 @@ body::-webkit-scrollbar-thumb {
   width: 1024px;
 }
 
+/* LOGIN */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.input-user, .input-pass {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid black;
+  
+}
+
+.login-button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: rgb(240, 159, 9);
+  text-align: center;
+}
+
+/* SIGNUP */
+.add-professional {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.add-input , .add-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.add-input:focus , .add-textarea:focus {
+  background-color: rgba(192, 192, 192, 0.164);
+}
