@@ -24,7 +24,12 @@ export default class Search extends React.Component
                     onChange={this.changeHandler}
                     value={this.state.search}
                 />
-                <button onClick={this.search} className="button-search" variant="outline-secondary">Buscar</button>
+                <button 
+                    onClick={this.search} 
+                    className="button-search" 
+                    variant="outline-secondary"
+                >Buscar
+                </button>
             </div>
         )
     }

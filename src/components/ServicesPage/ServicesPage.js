@@ -16,8 +16,6 @@ export default class ServicesPage extends Component
 
     normalizeString = (string)=>{return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}
 
-
-    
     searchHandler = (searchValue)=>{
         let auxArray = this.state.arrayResponse.filter((worker)=>{
             return this.normalizeString(worker.job) === this.normalizeString(searchValue);
@@ -27,10 +25,28 @@ export default class ServicesPage extends Component
 
     componentDidMount()
     {
+        let USER_SEARCH = null;
+
         fetch("https://api-servi-oficios.herokuapp.com/professionals") /* TODO */
         .then((response)=>response.json())
-        .then((jsonResponse)=>{this.setState({arrayResponse: jsonResponse})})
+        .then((jsonResponse)=>{
+            this.setState({arrayResponse: jsonResponse});
+            USER_SEARCH = localStorage.getItem("userSearch");
+            localStorage.removeItem("userSearch");
+
+            if (USER_SEARCH)
+            {
+                fetch(`https://api-servi-oficios.herokuapp.com/professionals/jobs/${USER_SEARCH}`) /* TODO */
+                .then((response)=>response.json())
+                .then((jsonResponse)=>{
+                    this.setState({arrayWorkersToShow: jsonResponse});
+                })
+                .catch((error)=>{ /* TODO catch handler */ });
+            }
+        })
         .catch((error)=>{ /* TODO catch handler */ });
+        
+        
     }
 
     render() {
