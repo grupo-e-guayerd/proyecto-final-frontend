@@ -1,5 +1,4 @@
 import React from "react";
-import Form from 'react-bootstrap/Form';
 
 export default class SignupProfessional extends React.Component {
     constructor(){
@@ -12,6 +11,7 @@ export default class SignupProfessional extends React.Component {
             currency: "ARS",
             zone: "",
             description: "",
+            
             //Categories - fetch
             categories: [],
 
@@ -111,9 +111,7 @@ export default class SignupProfessional extends React.Component {
                                 value={imgUrl} 
                                 onChange={this.handleChange}
                             />
-                            {/* <Form.Group>
-                                <Form.File id="exampleFormControlFile1" label="Example file input" />
-                            </Form.Group> */}
+
                             <label className="signup-label">Ingrese el valor hora de su trabajo</label>
                             <input 
                                 type="text" 
@@ -137,14 +135,7 @@ export default class SignupProfessional extends React.Component {
                             <select className="signup-input" name="currency" onChange={this.handleChange}>
                                 <option value="ars">ARS</option>
                             </select>
-                        {/*  <input 
-                                type="text" 
-                                className="signup-input" 
-                                placeholder="Moneda" 
-                                name="currency" 
-                                value={currency} 
-                                onChange={this.handleChange}
-                            /> */}
+            
                             <label className="signup-label">Ingrese una descripción</label>
                             <textarea 
                                 type="text" 
