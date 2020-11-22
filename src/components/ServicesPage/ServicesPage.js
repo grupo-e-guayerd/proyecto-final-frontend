@@ -81,7 +81,7 @@ export default class ServicesPage extends Component
                             searchHandler={this.searchHandler} 
                         />
                     </div>
-                    <CardList arrayWorkersToShow={arrayWorkersToShow.length > 0 ? arrayWorkersToShow : arrayResponse} />
+                    <CardList loadData={this.props.loadData} arrayWorkersToShow={arrayWorkersToShow.length > 0 ? arrayWorkersToShow : arrayResponse} />
                 </div>
             </div>
         

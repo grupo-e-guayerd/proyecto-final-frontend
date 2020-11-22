@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomePage from "./Components/HomePage/HomePage"
 import './App.css';
@@ -14,9 +14,23 @@ import SignupProfessional from "./Components/Signup/SignupProfessional";
 import Login from "./Components/Login/Login";
 import LoginUser from "./Components/Login/LoginUser";
 import LoginProfessional from "./Components/Login/LoginProfessional";
+import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
 
-export default class App extends React.Component
-{
+export default class App extends React.Component {
+
+
+	constructor() {
+		super();
+		
+        this.state = {
+            professionalData:{}
+        }
+    }
+
+	loadData = (data) => {
+		this.setState({professionalData:data});
+	}
+
   render() {
     return (
       <div className="App">
@@ -24,19 +38,32 @@ export default class App extends React.Component
           <NavBar />
           <Switch>
             <Route exact path="/"><HomePage /></Route>
-            <Route exact path="/servicios"><ServicesPage /></Route>
+            <Route exact path="/servicios"><ServicesPage loadData={this.loadData} /></Route>
             <Route exact path="/nosotros"><AboutUsPage /></Route>
-            
+
             <Route exact path="/login"><Login /></Route>
             <Route exact path="/loginUser"><LoginUser /></Route>
             <Route exact path="/loginProfessional"><LoginProfessional /></Route>
-            
+
             <Route exact path="/signupUser"><SignupUser /></Route>
             <Route exact path="/signupProfessional"><SignupProfessional /></Route>
-            
-            <Route path="/*">{/* TODO NotFoundPage */}</Route>
+            <Route exact path="/perfil">
+            	<ProfessionalProfile
+					name={this.state.professionalData.name}
+					imgUrl={this.state.professionalData.imgUrl}
+					currency={this.state.professionalData.currency}
+					hourPrice={this.state.professionalData.hourPrice}
+					job={this.state.professionalData.job}
+					rating={this.state.professionalData.rating}
+					description={this.state.professionalData.description}
+					zone={this.state.professionalData.zone}
+            	/>
+            </Route>
+
+            {/* TODO */}
+            <Route path="/*"><h2>404 - not found</h2></Route>
           </Switch>
-          <Footer/>
+          <Footer />
         </Router>
       </div>
     )

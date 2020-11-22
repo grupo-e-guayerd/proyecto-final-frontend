@@ -19,9 +19,10 @@ class CardList extends Component {
                                 currency={worker.currency}
                                 id={worker.id}
                                 imgUrl={worker.imgUrl}
+                                zone={worker.zone}
                                 key={worker._id}
+                                loadData={this.props.loadData}
                             />
-                            console.log("vuelta")
                         })
                     )
                 }

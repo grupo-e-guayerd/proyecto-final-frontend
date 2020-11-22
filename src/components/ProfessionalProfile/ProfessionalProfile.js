@@ -1,37 +1,31 @@
 import React, { Component } from 'react';
 import { NavLink} from "react-router-dom";
 
-class Card extends Component {
+class ProfessionalProfile extends Component {
 
-    handleClickProfile = () => {
-        const data = this.props;
-        this.props.loadData(data);
+
+    handleClick = (e) => {
+        e.preventDefault();
     }
 
     render() {
-        let { imgUrl, name, currency, hourPrice, job, rating, description } = this.props;
+
+        const { imgUrl, name, currency, hourPrice, job, rating, description, zone } = this.props;
+
         return (
-            <>
-                {/* CARD COMPONENT */}
-                <div className="card-GE">
-                    {/* CARD IMAGE */}
-                    <div className="card-img-container-GE">
-                        <img src={imgUrl} alt="worker" className="card-img-GE" />
+            <div className="profile-container">
+                <div className="profile-card">
+                    <NavLink className="profile-button-back" to="/servicios">
+                        👻 SEGUIR BUSCANDO
+                    </NavLink>
+
+                    <div className="profile-img-container">
+                        <img className="profile-img" src={imgUrl} alt={name} />
                     </div>
 
-                    {/* CARD INFO */}
-                    <div className="card-info-GE">
-                        <h3 className="card-name-GE">
-                            <span>{
-                                name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
-                                + " " 
-                                + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
-                            }</span>
-                            <span className="card-price-GE">{currency.toUpperCase()} ${hourPrice}/h</span>
-                        </h3>
-                        <h4 className="card-job-GE">{job[0].toUpperCase()+job.slice(1)}</h4>
-                       
-                        <span className="card-rating-GE">
+                    <div className="profile-info">
+                        <span className="profile-job">{job}</span>
+                        <span className="profile-rating">
                         {/* <i className="fas fa-star-half-alt" /> */}
                         {
                             rating === 1 && (
@@ -89,24 +83,25 @@ class Card extends Component {
                             )
                         }
                         </span>
-
-                        <p className="card-description-GE">
-                            {description}
-                        </p>
-                        
-                        {/* PROFILE */} 
-                        <NavLink 
-                            className="card-profile-GE" 
-                            to="/perfil"
-                            onClick={this.handleClickProfile}
-                        >
-                            Ver perfil
-                        </NavLink>
+                        <div className="profile-name">{
+                                name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
+                                + " " 
+                                + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
+                            }</div>
+                        <div className="profile-zone">{zone}</div>
+                        <p className="profile-description">{description}</p>
+                        <button 
+                        className="profile-button" 
+                        onClick={this.handleClick}>
+                            <span className="profile-button-text">CONTRATAR DESDE</span>
+                            <span className="profile-currency">{currency}</span>
+                            <span className="profile-price">${hourPrice}</span>
+                        </button>
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 }
 
-export default Card;
+export default ProfessionalProfile;
