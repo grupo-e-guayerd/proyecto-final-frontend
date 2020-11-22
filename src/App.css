@@ -591,7 +591,7 @@ body::-webkit-scrollbar-thumb {
     background-color: black;
   }
 
-  0% {
+  50% {
     background-color: rgb(29, 18, 2);
     
     transform: scale(1.03);
