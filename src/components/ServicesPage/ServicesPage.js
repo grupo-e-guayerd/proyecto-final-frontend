@@ -10,33 +10,53 @@ export default class ServicesPage extends Component
         super();
         this.state = {
             arrayResponse: [],
-            arrayWorkersToShow: []
+            arrayWorkersToShow: [],
+
+            categoryArray: []
         }
     }
 
     normalizeString = (string)=>{return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}
 
-    searchHandler = (searchValue)=>{
-        let auxArray = this.state.arrayResponse.filter((worker)=>{
-            return this.normalizeString(worker.job) === this.normalizeString(searchValue);
+
+    searchHandler = (subjectValue, searchValue)=>{
+        subjectValue = this.normalizeString(subjectValue);
+        searchValue = this.normalizeString(searchValue);
+        
+        fetch(`https://api-servi-oficios.herokuapp.com/professionals/${subjectValue}${searchValue}`) /* TODO */
+        .then((response)=>response.json())
+        .then((jsonResponse)=>{
+            this.setState({arrayWorkersToShow: jsonResponse});
         })
-        this.setState({arrayWorkersToShow: auxArray});
-    }
+        .catch((error)=>{ /* TODO catch handler */ })
+      }
 
     componentDidMount()
     {
+        fetch("https://api-servi-oficios.herokuapp.com/categories") /* TODO */
+        .then((response)=>response.json())
+        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse}) })
+        .catch((error)=>{ /* TODO catch handler */ });
+
+        let SUBJECT_SEARCH = null;
         let USER_SEARCH = null;
 
         fetch("https://api-servi-oficios.herokuapp.com/professionals") /* TODO */
         .then((response)=>response.json())
         .then((jsonResponse)=>{
             this.setState({arrayResponse: jsonResponse});
+
+            SUBJECT_SEARCH = localStorage.getItem("subjectSearch");
             USER_SEARCH = localStorage.getItem("userSearch");
+            localStorage.removeItem("subjectSearch")
             localStorage.removeItem("userSearch");
 
-            if (USER_SEARCH)
+            if (SUBJECT_SEARCH && USER_SEARCH)
             {
-                fetch(`https://api-servi-oficios.herokuapp.com/professionals/jobs/${USER_SEARCH}`) /* TODO */
+                SUBJECT_SEARCH = this.normalizeString(SUBJECT_SEARCH);
+                USER_SEARCH = this.normalizeString(USER_SEARCH);
+
+                fetch(`https://api-servi-oficios.herokuapp.com/professionals/${SUBJECT_SEARCH}${USER_SEARCH}`) /* TODO */
                 .then((response)=>response.json())
                 .then((jsonResponse)=>{
                     this.setState({arrayWorkersToShow: jsonResponse});
@@ -50,10 +70,10 @@ export default class ServicesPage extends Component
     }
 
     render() {
-        const { arrayResponse, arrayWorkersToShow } = this.state;
+        const { categoryArray, arrayResponse, arrayWorkersToShow } = this.state;
         return (
             <div className="service-page-container">
-                <SideBar />
+                <SideBar categoryArray={categoryArray} />
                 <div className="services-box-GE">
                     <div className="search-services-container">
                         <Search
