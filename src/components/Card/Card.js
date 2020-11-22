@@ -87,7 +87,7 @@ class Card extends Component {
                         <p className="card-description-GE">
                             {description}
                         </p>
-                        <NavLink className="card-profile-GE" to="/profile">Ver perfil</NavLink>
+                        <NavLink className="card-profile-GE" to="/profile">Contratar</NavLink>
                     </div>
                 </div>
             </>

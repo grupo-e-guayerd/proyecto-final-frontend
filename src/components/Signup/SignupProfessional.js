@@ -1,5 +1,4 @@
 import React from "react";
-import Form from 'react-bootstrap/Form';
 
 export default class SignupProfessional extends React.Component {
     constructor(){
@@ -12,8 +11,15 @@ export default class SignupProfessional extends React.Component {
             currency: "ARS",
             zone: "",
             description: "",
+            email: "",
+            phone: "",
+            seniority: "",
+            dni: "",
+
+            
             //Categories - fetch
             categories: [],
+            zones: [],
 
             send: false
         }
@@ -29,16 +35,22 @@ export default class SignupProfessional extends React.Component {
         event.preventDefault()
         const OBJ_NEWPRO = { 
             name: this.state.name,
+            dni: this.state.dni,
+            email: this.state.email,
+            phone:this.state.phone,
             job: this.state.job,
+            seniority: this.state.seniority,
             imgUrl: this.state.imgUrl,
             hourPrice: this.state.hourPrice,
             currency: this.state.currency,
             zone: this.state.zone,
             description:this.state.description,
-            status: true
+            status: true,
+            rating: 3,
+            registrationDate: new Date()  
         }
-
-        fetch("https://api-servi-oficios.herokuapp.com/pendings" , {
+        
+        fetch( "https://api-servi-oficios.herokuapp.com/pendings", {
             method: "POST",
             body: JSON.stringify(OBJ_NEWPRO),
             headers: {"Content-Type": "application/json"}
@@ -58,14 +70,24 @@ export default class SignupProfessional extends React.Component {
         .then( jsonCategories => {this.setState({categories : jsonCategories})} )
         .catch( error => console.log(error))
     }
+    
+    getZones = () => {
+        fetch("https://api-servi-oficios.herokuapp.com/zones" , {
+            method: "GET"
+        })
+        .then( response => response.json())
+        .then( jsonZones => {this.setState({zones : jsonZones})} )
+        .catch( error => console.log(error))
+    }
 
     componentDidMount(){
         this.getCategories()
+        this.getZones()
     }
 
 
     render(){
-        const {categories , name , job , imgUrl , hourPrice , currency , zone , description } = this.state
+        const {categories, zones, name, dni, email, phone, seniority , imgUrl , hourPrice  , description } = this.state
         return(
             <>
 
@@ -74,20 +96,55 @@ export default class SignupProfessional extends React.Component {
                     <form className="signup"> 
                         <div className="signup-professional">
                             
-                            <h2 className="signup-title">Ingrese sus datos</h2>
+                            <h2 className="signup-title">Ingresa tus datos</h2>
                             
-                            <label className="signup-label">Ingrese su nombre completo</label>
+                            <label className="signup-label">Ingresa tu nombre completo</label>
                             <input 
                                 type="text" 
                                 className="signup-input" 
-                                placeholder=" " 
+                                placeholder="Nombre y Apellido " 
                                 name="name" 
                                 value={name} 
                                 onChange={this.handleChange}
                             />
+                            <label className="signup-label">Ingresa la URL de tu foto</label>
+                            <input 
+                                type="text" 
+                                className="signup-input" 
+                                placeholder="URL de la imagen" 
+                                name="imgUrl" 
+                                value={imgUrl} 
+                                onChange={this.handleChange}
+                            />
+                            <label className="signup-label">Ingresa tu DNI</label>
+                            <input 
+                                type="number" 
+                                className="signup-input" 
+                                placeholder="XX.XXX.XXX" 
+                                name="dni" 
+                                value={dni} 
+                                onChange={this.handleChange}
+                            />
+                            <label className="signup-label">Ingresa tu e-mail</label>
+                            <input 
+                                type="mail" 
+                                className="signup-input" 
+                                placeholder="ejemplo@ejemplo.com" 
+                                name="email" 
+                                value={email} 
+                                onChange={this.handleChange}
+                            />
+                            <label className="signup-label">Ingresa tu teléfono</label>
+                            <input 
+                                type="number" 
+                                className="signup-input" 
+                                placeholder="11111111" 
+                                name="phone" 
+                                value={phone} 
+                                onChange={this.handleChange}
+                            />
                             
-                            <label className="signup-label">Seleccione su ocupación</label>
-                            
+                            <label className="signup-label">Selecciona tu ocupación</label>
                             <select name="job" className="signup-input" onChange={this.handleChange}>
                             {   
                                 !categories.error && categories.map( category => { 
@@ -102,50 +159,50 @@ export default class SignupProfessional extends React.Component {
                                 })
                             }
                             </select>
-                            <label className="signup-label">Ingrese la URL de su foto</label>
-                            <input 
-                                type="url" 
-                                className="signup-input" 
-                                placeholder="URL de la imagen" 
-                                name="imgUrl" 
-                                value={imgUrl} 
-                                onChange={this.handleChange}
-                            />
-                            {/* <Form.Group>
-                                <Form.File id="exampleFormControlFile1" label="Example file input" />
-                            </Form.Group> */}
-                            <label className="signup-label">Ingrese el valor hora de su trabajo</label>
+
+                            <label className="signup-label">¿Desde cuándo ejerces? </label>
                             <input 
                                 type="text" 
                                 className="signup-input" 
-                                placeholder="Valor hora" 
-                                name="hourPrice" 
-                                value={hourPrice} 
+                                placeholder="Años de antigüedad" 
+                                name="seniority" 
+                                value={seniority} 
                                 onChange={this.handleChange}
                             />
-                            <label className="signup-label">En qué zona trabaja</label>
-                            <input 
-                                type="text" 
-                                className="signup-input" 
-                                placeholder="Zona" 
-                                name="zone" 
-                                value={zone} 
-                                onChange={this.handleChange}
-                            />
-                            <label className="signup-label">Seleccione la moneda de su país</label>
+                            
+                            <label className="signup-label">Selecciona la moneda de tu país</label>
                             
                             <select className="signup-input" name="currency" onChange={this.handleChange}>
                                 <option value="ars">ARS</option>
                             </select>
-                        {/*  <input 
-                                type="text" 
+
+                            <label className="signup-label">Ingresa el valor-hora de tu trabajo</label>
+                            <input 
+                                type="number" 
                                 className="signup-input" 
-                                placeholder="Moneda" 
-                                name="currency" 
-                                value={currency} 
+                                placeholder="¿Cuánto cobras?" 
+                                name="hourPrice" 
+                                value={hourPrice} 
                                 onChange={this.handleChange}
-                            /> */}
-                            <label className="signup-label">Ingrese una descripción</label>
+                            />
+
+                            <label className="signup-label">¿En qué zona trabajas?</label>
+                            <select name="zone" className="signup-input" onChange={this.handleChange}>
+                            {   
+                                !zones.error && zones.map( zone => { 
+                                    return (
+                                        <option 
+                                            key={zone._id} 
+                                            value={zone.zone}
+                                        >
+                                            {zone.zone[0].toUpperCase() + zone.zone.slice(1)}
+                                        </option> 
+                                    ) 
+                                })
+                            }
+                            </select>
+            
+                            <label className="signup-label">Ingresa una descripción de lo que haces</label>
                             <textarea 
                                 type="text" 
                                 className="signup-textarea" 
@@ -154,15 +211,16 @@ export default class SignupProfessional extends React.Component {
                                 value={description} 
                                 onChange={this.handleChange}
                             />
+
+                            <input type="checkbox"></input>
+                            <label className="signup-label"> Acepto todos los términos y condiciones.</label>
+                            
                             <button className="signup-button" onClick={this.handleSubmit}> Enviar </button>
                         </div>
 
-                </form>
-
+                </form> 
                 )
-                
             }
-     
             {
             this.state.send && (
                 <div className="send-request-success">
