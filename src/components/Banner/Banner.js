@@ -8,12 +8,14 @@ export default class Banner extends React.Component
   constructor() {
     super();
     this.state = {
+      subjectSearch: "",
       userSearch: "",
       redirect: false
     }
   }
 
-  searchHandler = (searchValue)=>{
+  searchHandler = (subjectValue, searchValue)=>{
+    this.setState({subjectSearch: subjectValue});
     this.setState({userSearch: searchValue});
     this.setState({redirect: true});
   }
@@ -23,6 +25,7 @@ export default class Banner extends React.Component
       <>
         { this.state.redirect && ( 
           <>
+            {localStorage.setItem("subjectSearch", this.state.subjectSearch)}
             {localStorage.setItem("userSearch", this.state.userSearch)}
             <Redirect to="/servicios" /> 
           </>
