@@ -33,7 +33,7 @@ export default class ServicesPage extends Component
     {
         fetch("https://api-servi-oficios.herokuapp.com/categories") /* TODO */
         .then((response)=>response.json())
-        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse}); console.log(jsonResponse) })
+        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse}) })
         .catch((error)=>{ /* TODO catch handler */ });
 
         let SUBJECT_SEARCH = null;
@@ -71,7 +71,9 @@ export default class ServicesPage extends Component
         arrayWorkersToShow = arrayWorkersToShow.filter((worker)=>{ return worker.status === true});
         return (
             <div className="service-page-container">
-                {arrayResponse.length > 0 && ( <SideBar categoryArray={categoryArray} arrayWorkers={arrayResponse}/> )}
+                {arrayResponse.length > 0 && ( 
+                    <SideBar categoryArray={categoryArray} arrayWorkers={arrayResponse} searchHandler={this.searchHandler}/>
+                )}
                 <div className="services-box-GE">
                     <div className="search-services-container">
                         <Search

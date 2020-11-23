@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-export default class SideBar extends Component {
+export default class SideBar extends Component
+{
+    clickHandler = (event)=>{ this.props.searchHandler("jobs/", event.target.name) }
+
     render() {
         let { categoryArray, arrayWorkers } = this.props;
         let auxArrayWorkers = []; /* In each iteration, only the workers of the category in question will be saved. */
@@ -24,7 +27,12 @@ export default class SideBar extends Component {
 
                         auxArrayWorkers = arrayWorkers.filter( worker => { return worker.job === category} );
                         return (
-                            <button key={arrayObject._id} className="sidebar-button">
+                            <button 
+                                key={arrayObject._id} 
+                                name={category}
+                                className="sidebar-button"
+                                onClick={this.clickHandler}
+                            >
                                 {category[0].toUpperCase()+category.slice(1)}
                                 <span className="sidebar-availables"> ({auxArrayWorkers.length})</span>
                             </button>
