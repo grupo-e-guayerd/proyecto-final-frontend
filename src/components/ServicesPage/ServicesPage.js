@@ -73,7 +73,7 @@ export default class ServicesPage extends Component
         const { categoryArray, arrayResponse, arrayWorkersToShow } = this.state;
         return (
             <div className="service-page-container">
-                <SideBar categoryArray={categoryArray} />
+                <SideBar categoryArray={categoryArray} arrayWorkers={arrayWorkersToShow}/>
                 <div className="services-box-GE">
                     <div className="search-services-container">
                         <Search
