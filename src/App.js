@@ -37,7 +37,7 @@ export default class App extends React.Component {
         <Router>
           <NavBar />
           <Switch>
-            <Route exact path="/"><HomePage /></Route>
+            <Route exact path="/"><HomePage loadData={this.loadData} /></Route>
             <Route exact path="/servicios"><ServicesPage loadData={this.loadData} /></Route>
             <Route exact path="/nosotros"><AboutUsPage /></Route>
 

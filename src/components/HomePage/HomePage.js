@@ -9,7 +9,7 @@ export default class HomePage extends React.Component
         return (
             <div>
                 <Banner />
-                <Ranking />
+                <Ranking loadData={this.props.loadData} />
             </div>
         )
     }
