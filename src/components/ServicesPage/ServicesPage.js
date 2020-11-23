@@ -25,17 +25,15 @@ export default class ServicesPage extends Component
         
         fetch(`https://api-servi-oficios.herokuapp.com/professionals/${subjectValue}${searchValue}`) /* TODO */
         .then((response)=>response.json())
-        .then((jsonResponse)=>{
-            this.setState({arrayWorkersToShow: jsonResponse});
-        })
+        .then(((jsonResponse)=>{ jsonResponse[0] && ( this.setState({arrayWorkersToShow: jsonResponse}) ) }))
         .catch((error)=>{ /* TODO catch handler */ })
-      }
+    }
 
     componentDidMount()
     {
         fetch("https://api-servi-oficios.herokuapp.com/categories") /* TODO */
         .then((response)=>response.json())
-        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse}) })
+        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse})})
         .catch((error)=>{ /* TODO catch handler */ });
 
         let SUBJECT_SEARCH = null;
@@ -44,7 +42,8 @@ export default class ServicesPage extends Component
         fetch("https://api-servi-oficios.herokuapp.com/professionals") /* TODO */
         .then((response)=>response.json())
         .then((jsonResponse)=>{
-            this.setState({arrayResponse: jsonResponse});
+            jsonResponse[0] && ( this.setState({arrayResponse: jsonResponse}) )
+            ;
 
             SUBJECT_SEARCH = localStorage.getItem("subjectSearch");
             USER_SEARCH = localStorage.getItem("userSearch");
@@ -58,9 +57,7 @@ export default class ServicesPage extends Component
 
                 fetch(`https://api-servi-oficios.herokuapp.com/professionals/${SUBJECT_SEARCH}${USER_SEARCH}`) /* TODO */
                 .then((response)=>response.json())
-                .then((jsonResponse)=>{
-                    this.setState({arrayWorkersToShow: jsonResponse});
-                })
+                .then((jsonResponse)=>{ jsonResponse[0] && ( this.setState({arrayWorkersToShow: jsonResponse}) ) })
                 .catch((error)=>{ /* TODO catch handler */ });
             }
         })
@@ -70,10 +67,11 @@ export default class ServicesPage extends Component
     }
 
     render() {
-        const { categoryArray, arrayResponse, arrayWorkersToShow } = this.state;
+        let { categoryArray, arrayResponse, arrayWorkersToShow } = this.state;
+        arrayWorkersToShow = arrayWorkersToShow.filter((worker)=>{ return worker.status === true});
         return (
             <div className="service-page-container">
-                <SideBar categoryArray={categoryArray} arrayWorkers={arrayWorkersToShow}/>
+                {arrayResponse.length > 0 && ( <SideBar categoryArray={categoryArray} arrayWorkers={arrayResponse}/> )}
                 <div className="services-box-GE">
                     <div className="search-services-container">
                         <Search
