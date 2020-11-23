@@ -4,20 +4,20 @@ export default class SignupUser extends React.Component {
 
     render(){
         return(
-            <form className="login"> 
+            <form className="signup-user"> 
                 <h3 className="login-title">Sign Up</h3>
 
-                    <label>First name</label>
-                    <input type="text" className="input-user" placeholder="First name" />
+                    <label className="signup-label">Nombre</label>
+                    <input type="text" className="input-user" placeholder="Ingrese nombre" />
 
-                    <label>Last name</label>
-                    <input type="text" className="input-user" placeholder="Last name" />
+                    <label className="signup-label">Apellido</label>
+                    <input type="text" className="input-user" placeholder="Ingrese apellido" />
 
-                    <label>Email address</label>
-                    <input type="email" className="input-user" placeholder="Enter email" />
+                    <label className="signup-label">Email</label>
+                    <input type="email" className="input-user" placeholder="Ingrese email" />
 
-                    <label>Password</label>
-                    <input type="password" className="input-pass" placeholder="Enter password" />
+                    <label className="signup-label">Password</label>
+                    <input type="password" className="input-pass" placeholder="Ingrese password" />
 
                 <button type="submit" className="login-button">Sign Up</button>
 
