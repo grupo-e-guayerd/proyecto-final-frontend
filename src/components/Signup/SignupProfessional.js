@@ -96,7 +96,7 @@ export default class SignupProfessional extends React.Component {
                     <form className="signup"> 
                         <div className="signup-professional">
                             
-                            <h2 className="signup-title">Ingresa tus datos</h2>
+                            <h2 className="signup-title">Registrarse</h2>
                             
                             <label className="signup-label">Ingresa tu nombre completo</label>
                             <input 

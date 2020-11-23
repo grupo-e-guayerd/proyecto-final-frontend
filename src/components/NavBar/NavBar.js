@@ -17,7 +17,7 @@ class NavBar extends Component {
                         <NavLink exact to="/" className="navbar-navlink-GE" autofocus="on">Home</NavLink>
                         <NavLink exact to="/servicios" className="navbar-navlink-GE">Servicios</NavLink>
                         <NavLink exact to="/nosotros" className="navbar-navlink-GE">Nosotros</NavLink>
-                        <NavLink exact to="/login" className="navbar-navlink-GE">Login</NavLink>
+                        <NavLink exact to="/login" className="navbar-navlink-GE">Ingresar</NavLink>
                     </div>
                 </nav>
             </>
