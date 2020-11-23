@@ -9,13 +9,12 @@ class NavBar extends Component {
                 <nav className="navbar-GE">
                     {/* NAVBAR TITLE */}
                     <div className="navbar-title-GE">
-                        
                         <h1 className="navbar-title-main"><i className="fas fa-tools"></i> ServiOficios</h1>
                     </div>
 
                     {/* NAVBAR LINKS */}
                     <div className="navbar-links-GE">
-                        <NavLink exact to="/" className="navbar-navlink-GE">Home</NavLink>
+                        <NavLink exact to="/" className="navbar-navlink-GE" autofocus="on">Home</NavLink>
                         <NavLink exact to="/servicios" className="navbar-navlink-GE">Servicios</NavLink>
                         <NavLink exact to="/nosotros" className="navbar-navlink-GE">Nosotros</NavLink>
                         <NavLink exact to="/login" className="navbar-navlink-GE">Login</NavLink>

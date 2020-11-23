@@ -20,12 +20,13 @@ export default class LoginUser extends React.Component {
                     name = "password"
                 />
 
-                <p  className="text-right" >
-                    <Link to="/signupUser">Create User</Link>
-                    
-                </p>
                 
                 <button className="login-button" >Login</button>
+
+                <p  className="text-right" >
+                    <Link to="/signupUser" className="login-create">Create User</Link>
+                    
+                </p>
             </form> 
         )
     }

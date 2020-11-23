@@ -5,23 +5,22 @@ body {
 }
 
 body::-webkit-scrollbar {
-  background-color: grey;
+  background-color: silver;
   width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: silver;
+  background-color: gray;
   border-radius: 5px;
 }
 
 /* NAVBAR COMPONENT */
 .navbar-GE {
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 5px 0 5px black;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -32,15 +31,20 @@ body::-webkit-scrollbar-thumb {
   padding: 12px 10px;
 }
 
+.fa-tools {
+	font-size: 1.4rem;
+}
+
 .navbar-title-GE {
   color: white;
   font-size: 1.2rem;
   font-weight: 800;
-  margin-left: 2rem;
+	margin-left: 2rem;
+	text-transform: uppercase;
 }
 
 .navbar-title-main {
-  font-size: 2rem;
+	font-size: 1.6rem;
 }
 
 .navbar-links-GE {
@@ -55,20 +59,30 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+.navbar-navlink-GE:focus {
+	border-bottom: 2px solid orange;
+	outline: none;
+	padding-bottom: .5rem;
+
+}
+
+
 /* .navbar-navlink-GE {
   color: orange;
 } TODO-------------------------------*/
 
 .navbar-navlink-GE:hover {
-  color: white;
-  text-decoration: underline;
+	color: white;
+	border-bottom: 2px solid orange;
+	padding-bottom: .5rem;
+	text-decoration: none;
 }
 
 /* CARD COMPONENT */
 .card-GE {
   color: rgba(253, 238, 208, 0.938);
   background-color: rgb(20, 20, 20);
-  box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.226);
+  box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.068);
   border-radius: 10px;
   transition: all .5s ease;
   position: relative;
@@ -160,8 +174,8 @@ body::-webkit-scrollbar-thumb {
 
 .d-block
 {
-  filter:brightness(35%);
-  height: 78vh;
+  filter:brightness(30%);
+  height: 92vh;
   object-fit: cover;
 }
 
@@ -182,10 +196,25 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
 }
 
+.fa-arrow-down {
+	color: black;
+}
+
+.fa-search {
+	color: black;
+}
+
+.footerGeneral {
+  padding: 1.5rem;
+  margin-top: 8rem;
+}
+
 .footerGeneral h6 {
   font-size: .75rem;
-  margin-top: 8rem;
+  bottom: 0;
+  left: 0;
   text-align: center;
+  width: 100%;
 }
 
 
@@ -270,8 +299,26 @@ body::-webkit-scrollbar-thumb {
 }
 
 .banner-title {
+	text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.356);
   font-size: 5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+
+.video-container {
+	background-color: black;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	margin-bottom: 5rem;
+	margin-top: -3.9rem;
+	width: 100%;
+}
+
+.video {
+	filter: brightness(40%);
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
 }
 
 .rating-title{
@@ -281,9 +328,6 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 5rem;
 }
 
-.carousel{
-  width: 100%;
-}
 .carousel-caption{
   position: absolute;
   top:50%;
@@ -291,42 +335,80 @@ body::-webkit-scrollbar-thumb {
   z-index: 10;
 }
 
+.search-box-GE {
+	width: 100%;
+}
+
 .search-select {
+	background-color: orange;
+	border: none;
+	border-radius: 10px 0px 0px 10px;
+	cursor: pointer;
+	color: black;
   padding: 10px 20px;
-  font-size: 1.2rem;
-  width: 25%;
-  border-radius: 10px 0px 0px 10px;
-  border: none;
-  outline: none;
+	font-size: 1.2rem;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+  width: 20%;
+}
+
+.search-select:hover {
+	opacity: .8;
+}
+
+.search-option {
+	appearance: none;
+	border-radius: 5px;
+	background-color: orange;
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	width: 100vw;
+}
+
+.search-option:hover {
+	background-color: red;
+	cursor: pointer;
 }
 
 .search-input{
-  padding: 10px 20px;
-  font-size: 1.2rem;
+	background-color: transparent;
+	border: none;
+	border-top: 2px solid orange;
+	border-bottom: 2px solid orange;
+	color: white;
+  padding: 8px 20px;
+	font-size: 1.2rem;	
   width: 65%;
-  border: none;
   outline: none;
+}
+
+.search-input::placeholder {
+	color: silver;
+	opacity: .8;
+}
+
+
+.search-option:hover {
+	background-color: red;
 }
 
 .button-search {
   background-color: orange;
   color: black;
   font-size: 1.2rem;
-  font-weight: 630;
-  padding: 10px 20px;
-  width: 10%;
+  font-weight: 700;
+  padding: 10px 15px;
+  width: 15%;
   border: none;
   border-radius: 10px;
   border-radius: 0px 10px 10px 0px;
   outline: none;
 }
 
-.search-select:focus, .search-input:focus {
-  box-shadow: 0 0 25px black;
-  border: 1px solid black;
-}
-
-.button-search:focus {
+.button-search:hover {
+	opacity: .9;
   outline: none;
 }
 
@@ -346,8 +428,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   margin: auto;
   margin-top: 8rem;
-  margin-bottom: 10rem;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   max-width: 500px;
   background-color: white;
   border-radius: 5px;
@@ -357,14 +438,18 @@ body::-webkit-scrollbar-thumb {
 .input-user, .input-pass {
   width: 100%;
   padding: 1rem;
-  margin-bottom: 2rem;
   border-radius: 5px;
   background-color: white;
   border: 1px solid black;
-  
+  margin-bottom: 1rem;
+}
+
+.input-user:focus, .input-pass:focus {
+  background-color: rgba(255, 166, 0, 0.226);
 }
 
 .login-button {
+  border: none;
   background-color: black;
   color: white;
   text-decoration: none;
@@ -373,6 +458,12 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-top: 1.5rem;
+  outline: none;
+}
+
+.login-button:hover {
+  opacity: .9;
 }
 
 .login-title {
@@ -384,28 +475,36 @@ body::-webkit-scrollbar-thumb {
 }
 
 .login-container-button{
-  margin: auto ;
-  margin-top: 8rem;
-  margin-bottom: 10rem;
-  background-color: white;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-space {
+  background-color: red;
+  visibility: hidden;
+  width: 2rem;
 }
 
 .login-button-principal {
-  display: flex;
-  flex-direction:column;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 0.6rem 6rem 0.6rem 6rem ;
   background-color: black;
-  color: white;
   border-radius: 5px;
+  border: 2px solid orange;
+  color: white;
   font-size: 1.2rem;
   font-weight: 500;
-
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 20px 40px;
+  transition: all .3s ease;
+  width: 300px;
 }
 
-
+.login-button-principal:hover {
+  transform: scale(1.1);
+}
 
 .login-button-principal-2:hover, .login-button-principal-1:hover{
   background-color: rgba(0, 0, 0, 0.945)
@@ -414,26 +513,36 @@ body::-webkit-scrollbar-thumb {
 .login-title-principal{
   font-size: 2rem;
   font-weight: 800;
-  margin-top:2rem;
-  margin-bottom: 3rem;
   color:orange;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
+.login-create {
+  color: royalblue;
+  font-weight: 500;
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
 /* SIGNUP */
-.signup-professional {
+.signup-professional, .signup-user {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 4rem;
   max-width: 500px;
   margin: auto;
-  background-color: white;
+  margin-top: 6rem;
   border-radius: 5px;
 }
 
 .signup-input , .signup-textarea {
+  color: gray;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
   background-color: white;
@@ -442,6 +551,7 @@ body::-webkit-scrollbar-thumb {
 
 .signup-label {
   color: black;
+  font-weight: 700;
 }
 
 .signup-title {
@@ -453,10 +563,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .signup-input:focus , .signup-textarea:focus {
-  background-color: rgba(192, 192, 192, 0.164);
+  background-color: rgba(255, 166, 0, 0.301);
 }
 
 .signup-button {
+  border: none;
   background-color: black;
   color: white;
   text-decoration: none;
@@ -465,6 +576,11 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;   
+  outline: none;
+}
+
+.signup-button:hover {
+  opacity: .9;
 }
 
 .send-request-success {

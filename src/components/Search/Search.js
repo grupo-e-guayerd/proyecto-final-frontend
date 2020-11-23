@@ -34,9 +34,11 @@ export default class Search extends React.Component
         return (
             <div className="search-box-GE">
                 <select className="search-select" name="subjectSearch" onChange={this.changeHandler}>
-                    <option value="jobs/" >Categoría</option>
-                    <option value="names/" >Profesional (nombre)</option>
-                    <option value="zones/" >Zona</option>
+                    <option value="jobs/" className="search-option">
+                        Categoría
+                    </option>
+                    <option value="names/" className="search-option">Profesional</option>
+                    <option value="zones/" className="search-option">Zona</option>
                 </select>
                 <input 
                     className="search-input"
@@ -47,7 +49,10 @@ export default class Search extends React.Component
                     aria-describedby="basic-addon2"
                     onChange={this.changeHandler}
                     value={this.state.search}
+                    autofocus="on"
                 />
+
+                {/* TODO */}
                 <datalist id="suggestions">
                 {
                     subjectSearch === "jobs/" && (
@@ -65,14 +70,14 @@ export default class Search extends React.Component
                         })
                     )
                 }
-                </datalist>
-                {/* TODO ¿porque no puedo evitar sugerencias del navegador y usar las mías? */}
+                </datalist> 
+                {/* /* TODO ¿porque no puedo evitar sugerencias del navegador y usar las mías? */}
 
                 <button 
                     onClick={this.search} 
                     className="button-search" 
                     variant="outline-secondary"
-                >Buscar
+                ><i class="fas fa-search"></i> Buscar 
                 </button>
             </div>
         )
