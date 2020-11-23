@@ -16,7 +16,8 @@ class ProfessionalProfile extends Component {
             <div className="profile-container">
                 <div className="profile-card">
                     <NavLink className="profile-button-back" to="/servicios">
-                        👻 SEGUIR BUSCANDO
+                        <i class="fas fa-chevron-circle-left"></i>
+                        <span className="button-back-text">volver</span>
                     </NavLink>
 
                     <div className="profile-img-container">

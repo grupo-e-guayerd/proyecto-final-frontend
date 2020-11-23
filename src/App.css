@@ -506,9 +506,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .profile-button-back {
-  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.397);
+  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.212);
   border-radius: 5px;
   color: black;
+  display: flex;
+  align-items: center;
   font-size: .9rem;
   font-weight: 500;
   padding: 1rem 1.3rem;
@@ -516,12 +518,20 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   text-align: center;
   text-decoration: none;
+  transition: all .3s ease;
   outline: none;
-  right: -14rem;
+  right: -10rem;
 }
 
 .profile-button-back:hover {
   color: black;
+  padding: 1.2rem 1.3rem;
+  text-decoration: none;
+}
+
+.button-back-text {
+  font-size: 1rem;
+  margin-left: .5rem;
 }
 
 .profile-img-container {
@@ -577,6 +587,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   color: white;
   font-weight: 600;
+  outline: none;
   padding: .5rem;
   position: absolute;
   bottom: 2rem;
@@ -584,6 +595,11 @@ body::-webkit-scrollbar-thumb {
   width: 40%;
 
   animation: buttonEffect 2s ease infinite;
+}
+
+.fa-chevron-circle-left {
+  color: black;
+  font-size: 1.5rem;
 }
 
 @keyframes buttonEffect {
