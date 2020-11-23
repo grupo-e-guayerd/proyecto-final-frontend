@@ -41,7 +41,7 @@ export default class Ranking extends React.Component
         return (
             <>
                 <h2 className = "rating-title">Algunos de nuestros mejores profesionales</h2>
-                <CardList arrayWorkersToShow={this.state.arrayMostPopulars}></CardList>
+                <CardList loadData={this.props.loadData} arrayWorkersToShow={this.state.arrayMostPopulars}></CardList>
             </>
         )
     }
