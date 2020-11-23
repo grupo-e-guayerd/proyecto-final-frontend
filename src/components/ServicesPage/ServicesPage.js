@@ -33,11 +33,7 @@ export default class ServicesPage extends Component
     {
         fetch("https://api-servi-oficios.herokuapp.com/categories") /* TODO */
         .then((response)=>response.json())
-<<<<<<< HEAD
-        .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse})})
-=======
         .then((jsonResponse)=>{ this.setState({categoryArray: jsonResponse}); console.log(jsonResponse) })
->>>>>>> 4d0d70778f3adbd160f68d5f813622362008c9ad
         .catch((error)=>{ /* TODO catch handler */ });
 
         let SUBJECT_SEARCH = null;
