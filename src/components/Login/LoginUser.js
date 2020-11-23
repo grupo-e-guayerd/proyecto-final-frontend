@@ -6,7 +6,7 @@ export default class LoginUser extends React.Component {
     render(){
         return(
             <form className="login">
-                <h2 className="login-title">Login</h2>
+                <h2 className="login-title">Entrar</h2>
                 <input 
                     type="text" 
                     className="input-user" 
@@ -21,10 +21,10 @@ export default class LoginUser extends React.Component {
                 />
 
                 
-                <button className="login-button" >Login</button>
+                <button className="login-button" >Entrar</button>
 
                 <p  className="text-right" >
-                    <Link to="/signupUser" className="login-create">Create User</Link>
+                    <Link to="/signupUser" className="login-create">Crear usuario</Link>
                     
                 </p>
             </form> 
