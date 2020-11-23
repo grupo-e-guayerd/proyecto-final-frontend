@@ -238,7 +238,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sidebar-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
