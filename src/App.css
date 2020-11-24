@@ -204,24 +204,33 @@ body::-webkit-scrollbar-thumb {
 	color: black;
 }
 
+/* FOOTER */
+
 .footerGeneral {
   padding: 1.5rem;
   margin-top: 8rem;
-}
-
-.footerGeneral h6 {
-  font-size: .77rem;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
+.footer-title {
+  font-size: .77rem;
+  bottom: 0;
+  left: 0;
+}
 
-/* AboutUsPage styles*/
+
+.footer-nav-menu-item{
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+/* ABOUTUSPAGE styles*/
+
 .aboutUs-container {
   margin-top: 14vh;
-  max-width: 1024px;
   margin: auto;
 }
 
@@ -248,6 +257,69 @@ body::-webkit-scrollbar-thumb {
 
 .carousel-caption {
   padding: 0px 15px;
+}
+
+.aboutUs-nosotros {
+  background-color: rgb(238, 182, 0);
+}
+
+.aboutUs-movv{
+  color: rgba(253, 238, 208, 0.938);
+  background-color: red;
+
+  /* box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.068); */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+
+}
+
+.aboutUs-info-card{
+  margin-bottom: 30px;
+  width: 60%;
+  align-items: center;
+
+}
+
+
+.equipo-conteiner {
+  display: flex;
+  padding: 12px;
+  flex-flow: row wrap;
+  flex-direction: row;
+
+}
+
+.equipo-integrante{
+  flex: 1;
+  margin: 0px 8px;
+  display: flex;
+  min-height: 350px;
+  flex-direction: column;
+}
+.equipo-imagen {
+  width: 215px;
+  height: auto;
+  margin: 0px auto;
+}
+.integrante-info {
+  margin: 8px auto 32px auto;
+}
+
+.integrante-nombre {
+  color: orange;
+  padding: 0px 8px;
+  font-size: 1.1em;
+  margin-top: 0px;
+  text-align: center;
+}
+.integrante-puesto , .integrante-descripcion {
+  color: white;
+  padding: 0px 8px;
+  font-size: .9em;
+  margin-top: 0px;
+  text-align: center;
+  text-transform: initial;
 }
 
 /* SIDEBAR COMPONENT */

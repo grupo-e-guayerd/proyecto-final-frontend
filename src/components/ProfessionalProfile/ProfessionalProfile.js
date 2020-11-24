@@ -3,10 +3,20 @@ import { NavLink} from "react-router-dom";
 import RatingStars from "./../RatingStars/RatingStars"
 
 class ProfessionalProfile extends Component {
+    constructor(){
+        super()
+        this.state={
+            init_point: ""
+        }
+    }
 
-
-    handleClick = (e) => {
-        e.preventDefault();
+    componentDidMount(){
+        fetch("http://localhost:3001/mercadopago")
+        .then( response => response.json())
+        .then(data => {
+            console.log(data)
+            this.setState({init_point : data.init_point})
+        })
     }
 
     render() {
@@ -29,19 +39,23 @@ class ProfessionalProfile extends Component {
                         <span className="profile-job">{job&& ( job[0].toUpperCase()+job.slice(1) ) }</span>
                         <span className="profile-rating"><RatingStars rating={rating} /></span>
                         <div className="profile-name">{
-                                name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
-                                + " " 
-                                + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
+                                name && (
+                                    name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
+                                    + " " 
+                                    + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
+                                )
                             }</div>
                         <div className="profile-zone">{zone}</div>
                         <p className="profile-description">{description}</p>
-                        <button 
-                        className="profile-button" 
-                        onClick={this.handleClick}>
+                        <a 
+                        className="profile-button"
+                        href={this.state.init_point}
+                        /* target= "_blank"  */
+                        >
                             <span className="profile-button-text">CONTRATAR DESDE</span>
                             <span className="profile-currency">{currency}</span>
                             <span className="profile-price">${hourPrice}</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

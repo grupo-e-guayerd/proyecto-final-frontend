@@ -31,10 +31,10 @@ export default class Banner extends React.Component
           </>
         )}
         <div className="video-container">
-			<video className="video" autoplay="on" loop="on" muted="on">
-				<source src={Video}></source>
-			</video>
-		</div>
+          <video className="video" autoplay="on" loop="on" muted="on">
+            <source src={Video}></source>
+          </video>
+        </div>
 
         <div className="carousel-caption">
           <h3 className="banner-title">¿Qué necesitas?</h3>
