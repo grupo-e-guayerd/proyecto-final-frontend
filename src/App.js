@@ -15,7 +15,6 @@ import Login from "./Components/Login/Login";
 import LoginUser from "./Components/Login/LoginUser";
 import LoginProfessional from "./Components/Login/LoginProfessional";
 import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
-import ButtonUp from "./Components/ButtonUp/ButtonUp";
 
 export default class App extends React.Component {
 
