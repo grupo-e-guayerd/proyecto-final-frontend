@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "../CardList/CardList";
 import Search from "../Search/Search";
 import SideBar from "../SideBar/SideBar";
+import ButtonUp from "../ButtonUp/ButtonUp";
 
 
 export default class ServicesPage extends Component
@@ -73,6 +74,7 @@ export default class ServicesPage extends Component
         const { categoryArray, arrayResponse, arrayWorkersToShow } = this.state;
         return (
             <div className="service-page-container">
+                <ButtonUp />
                 <SideBar categoryArray={categoryArray} />
                 <div className="services-box-GE">
                     <div className="search-services-container">

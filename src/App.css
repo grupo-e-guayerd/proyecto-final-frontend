@@ -755,3 +755,21 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
+/* BUTTON UP COMPONENT */
+
+.button-up {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  margin-left: 90vw;
+  margin-top: 200vh;
+}
+
+.fa-arrow-circle-up {
+  font-size: 3rem;
+}
