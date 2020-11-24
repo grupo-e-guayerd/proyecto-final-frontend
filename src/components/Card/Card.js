@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import RatingStars from '../RatingStars/RatingStars';
 
 class Card extends Component {
 
@@ -30,65 +31,7 @@ class Card extends Component {
                             <span className="card-price-GE">{currency.toUpperCase()} ${hourPrice}/h</span>
                         </h3>
                         <h4 className="card-job-GE">{job[0].toUpperCase()+job.slice(1)}</h4>
-                       
-                        <span className="card-rating-GE">
-                        {/* <i className="fas fa-star-half-alt" /> */}
-                        {
-                            rating === 1 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 2 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 3 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 4 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 5 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                </>
-                            )
-                        }
-                        </span>
+                        <span className="card-rating-GE"><RatingStars rating={rating} /></span>
 
                         <p className="card-description-GE">
                             {description}

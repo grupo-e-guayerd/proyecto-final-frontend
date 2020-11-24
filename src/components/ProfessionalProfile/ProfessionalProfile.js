@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink} from "react-router-dom";
+import RatingStars from "./../RatingStars/RatingStars"
 
 class ProfessionalProfile extends Component {
 
@@ -26,64 +27,7 @@ class ProfessionalProfile extends Component {
 
                     <div className="profile-info">
                         <span className="profile-job">{job}</span>
-                        <span className="profile-rating">
-                        {/* <i className="fas fa-star-half-alt" /> */}
-                        {
-                            rating === 1 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 2 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 3 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 4 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="far fa-star" />
-                                </>
-                            )
-                        }
-                        {
-                            rating === 5 && (
-                                <>
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                    <i className="fas fa-star" />
-                                </>
-                            )
-                        }
-                        </span>
+                        <span className="profile-rating"><RatingStars rating={rating} /></span>
                         <div className="profile-name">{
                                 name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
                                 + " " 
