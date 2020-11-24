@@ -267,7 +267,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sidebar-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -286,12 +287,12 @@ body::-webkit-scrollbar-thumb {
   outline: none;
   padding-left: 1.2rem;
   text-align: left;
-  transition: all .5s ease;
+  transition: all .18s ease;
 }
 
 .sidebar-button:hover {
   color: orange;
-  margin-left: .5rem;
+  margin-left: .7rem;
 }
 
 .sidebar-availables {
