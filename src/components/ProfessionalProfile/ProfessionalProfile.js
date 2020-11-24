@@ -26,7 +26,7 @@ class ProfessionalProfile extends Component {
                     </div>
 
                     <div className="profile-info">
-                        <span className="profile-job">{job}</span>
+                        <span className="profile-job">{job&& ( job[0].toUpperCase()+job.slice(1) ) }</span>
                         <span className="profile-rating"><RatingStars rating={rating} /></span>
                         <div className="profile-name">{
                                 name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
