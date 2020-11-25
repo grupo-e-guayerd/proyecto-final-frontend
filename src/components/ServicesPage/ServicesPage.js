@@ -74,12 +74,12 @@ export default class ServicesPage extends Component
             <div className="service-page-container">
                 <ButtonUp />
                
-                {arrayResponse.length > 0 && ( 
-                    <SideBar 
-                        categoryArray={categoryArray} 
-                        arrayWorkers={arrayResponse} 
-                        searchHandler={this.searchHandler}/>
-                    )}
+                <SideBar 
+                    categoryArray={categoryArray} 
+                    arrayWorkers={arrayResponse} 
+                    searchHandler={this.searchHandler}
+                />
+                    
                 <div className="services-box-GE">
                     <div className="search-services-container">
                         <Search
