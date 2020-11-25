@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import RatingStars from '../RatingStars/RatingStars';
 
-class Card extends Component {
+export default class ProfessionalCard extends Component {
 
     handleClickProfile = () => {
         const data = this.props;
@@ -10,7 +10,7 @@ class Card extends Component {
     }
 
     render() {
-        let { imgUrl, name, currency, hourPrice, job, rating, description } = this.props;
+        let { imgUrl, name, currency, hourPrice, job, rating, description, isFavorite } = this.props;
         return (
             <>
                 {/* CARD COMPONENT */}
@@ -57,5 +57,3 @@ class Card extends Component {
         );
     }
 }
-
-export default Card;

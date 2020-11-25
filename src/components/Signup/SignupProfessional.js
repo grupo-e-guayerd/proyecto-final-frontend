@@ -15,7 +15,6 @@ export default class SignupProfessional extends React.Component {
             phone: "",
             seniority: "",
             dni: "",
-
             
             //Categories - fetch
             categories: [],
@@ -59,7 +58,7 @@ export default class SignupProfessional extends React.Component {
         .then(professional => {
             this.setState({send: true})
         })
-        .catch(error => console.log(error))
+        .catch(error => {})
     }
 
     getCategories = () => {
@@ -68,7 +67,7 @@ export default class SignupProfessional extends React.Component {
         })
         .then( response => response.json())
         .then( jsonCategories => {this.setState({categories : jsonCategories})} )
-        .catch( error => console.log(error))
+        .catch( error => {})
     }
     
     getZones = () => {
@@ -77,7 +76,7 @@ export default class SignupProfessional extends React.Component {
         })
         .then( response => response.json())
         .then( jsonZones => {this.setState({zones : jsonZones})} )
-        .catch( error => console.log(error))
+        .catch( error => {})
     }
     normalizeString = (string)=>{return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}
 

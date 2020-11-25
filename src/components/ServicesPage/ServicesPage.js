@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CardList from "../CardList/CardList";
+import ProfessionalList from "../ProfessionalList/ProfessionalList";
 import Search from "../Search/Search";
 import SideBar from "../SideBar/SideBar";
 import ButtonUp from "../ButtonUp/ButtonUp";
@@ -87,7 +87,10 @@ export default class ServicesPage extends Component
                             searchHandler={this.searchHandler} 
                         />
                     </div>
-                    <CardList loadData={this.props.loadData} arrayWorkersToShow={arrayWorkersToShow.length > 0 ? arrayWorkersToShow : arrayResponse} />
+                    <ProfessionalList 
+                        loadData={this.props.loadData} 
+                        arrayWorkersToShow={arrayWorkersToShow.length > 0 ? arrayWorkersToShow : arrayResponse}
+                    />
                 </div>
             </div>
         

@@ -809,8 +809,36 @@ body::-webkit-scrollbar-thumb {
   padding: .3rem;
 }
 
+.icon-favorite {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icon-favorite .far {
+  color: gray;
+  transition: all 0.5s ease;
+}
+
+.icon-favorite .fas {
+  color: red;
+  transition: all 0.5s ease;
+}
+
+.icon-favorite .far:hover {
+  transform: scale(1.3);
+  color: red;
+}
+
+.icon-favorite .fas:hover {
+  transform: scale(1.3);
+  color: grey;
+}
+
 .profile-rating {
-  margin-left: 40%;
+  /* margin-left: 40%; */
 }
 
 .profile-zone {

@@ -15,6 +15,7 @@ import Login from "./Components/Login/Login";
 import LoginUser from "./Components/Login/LoginUser";
 import LoginProfessional from "./Components/Login/LoginProfessional";
 import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
+import Favs from "./Favs/Favs";
 
 export default class App extends React.Component {
 
@@ -26,9 +27,7 @@ export default class App extends React.Component {
     }
   }
 
-	loadData = (data) => {
-		this.setState({professionalData:data});
-	}
+	loadData = (data) => { this.setState({professionalData:data}) }
 
   render() {
     return (
@@ -46,8 +45,10 @@ export default class App extends React.Component {
 
             <Route exact path="/signupUser"><SignupUser /></Route>
             <Route exact path="/signupProfessional"><SignupProfessional /></Route>
+            <Route exact path="/favoritos"><Favs /></Route>
             <Route exact path="/perfil">
             	<ProfessionalProfile
+                _id={this.state.professionalData._id}
                 name={this.state.professionalData.name}
                 imgUrl={this.state.professionalData.imgUrl}
                 currency={this.state.professionalData.currency}
@@ -55,6 +56,7 @@ export default class App extends React.Component {
                 job={this.state.professionalData.job}
                 rating={this.state.professionalData.rating}
                 description={this.state.professionalData.description}
+                isFavorite={this.state.professionalData.isFavorite}
                 zone={this.state.professionalData.zone}
               />
             </Route>

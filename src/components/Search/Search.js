@@ -79,7 +79,9 @@ export default class Search extends React.Component
                     onClick={this.search} 
                     className="button-search" 
                     variant="outline-secondary"
-                ><i class="fas fa-search"></i> Buscar 
+                >
+                    <i class="fas fa-search" />
+                    {" Buscar"} 
                 </button>
             </div>
         )
