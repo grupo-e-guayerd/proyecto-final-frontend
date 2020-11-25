@@ -2,6 +2,7 @@ import React, { Component } from "react";
 /* import GoogleMap from "../GoogleMap/GoogleMap"; */
 import Imagen from "../../assets/tratohecho.jpg";
 import Federico from "../../assets/federico.jpg";
+import ButtonUp from "../ButtonUp/ButtonUp";
 
 
 export default class AboutUsPage extends Component
@@ -27,6 +28,7 @@ export default class AboutUsPage extends Component
         return (
             
             <>
+                <ButtonUp />
                 <div className="video-container">
                     <img src={Imagen} className="video" alt="About us"></img>
                 </div>

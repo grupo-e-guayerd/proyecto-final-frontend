@@ -66,8 +66,8 @@ class ProfessionalProfile extends Component {
                         className="profile-button"
                         href={this.state.init_point}
                         >
-                            <span className="profile-button-text">CONTRATAR DESDE</span>
-                            <span className="profile-currency">{currency}</span>
+                            <span className="profile-button-text">CONTRATAR DESDE </span>
+                            {/* <span className="profile-currency">{currency} </span> */}
                             <span className="profile-price">${hourPrice}</span>
                         </a>
                     </div>

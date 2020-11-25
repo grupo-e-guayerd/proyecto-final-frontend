@@ -1,6 +1,6 @@
 /* GENERAL styles */
 body {
-  background-color: rgb(12, 12, 12);
+  background-color: black;
   color:white;
 }
 
@@ -208,25 +208,83 @@ body::-webkit-scrollbar-thumb {
 /* FOOTER */
 
 .footerGeneral {
-  padding: 1.5rem;
-  margin-top: 8rem;
+  background-color: black;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
 }
 
-.footer-title {
-  font-size: .77rem;
-  bottom: 0;
-  left: 0;
+.footer-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-
-.footer-nav-menu-item{
+.footer-nav-menu {
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
+.footer-nav-menu-item {
+  color: white;
+  padding: .3rem;
+  transition: transform .5s ease;
+  margin: .5rem 0;
+}
+
+.footer-nav-menu-item:hover {
+  color: orange;
+  transform: translateX(1rem);
+  text-decoration: none;
+}
+
+.footer-line {
+  border: 1px solid silver;
+  margin: 1rem auto 2rem;
+  opacity: .2;
+  width: 80%;
+}
+
+.footer-nav-social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-social-media .fab {
+  margin-right: .5rem;
+}
+
+.fab {
+  font-size: 2rem;
+  padding: .2rem;
+}
+
+.footer-nav-social-media-item {
+  color: white;
+  font-size: 1rem;
+  padding: .3rem;
+  transition: transform .5s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-nav-social-media-item:hover {
+  color: orange;
+  transform: translateX(1rem);
+  text-decoration: none;
+}
+
+.footer-title h6 {
+  color: orange;
+  text-shadow: 0 0 3px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
 
 /* ABOUTUSPAGE styles*/
 
@@ -488,6 +546,7 @@ body::-webkit-scrollbar-thumb {
 
 .services-box-GE {
   padding-top: 5rem;
+  padding-bottom: 10rem;
 }
 
 .search-services-container {
@@ -669,6 +728,7 @@ body::-webkit-scrollbar-thumb {
 .profile-container {
   background-color: orange;
   height: 60vh;
+  margin-bottom: 20rem;
   position: relative;
 }
 
@@ -782,8 +842,8 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: 2rem;
   right: 4rem;
+  text-align: center;
   width: 40%;
-
   animation: buttonEffect 2s ease infinite;
 }
 
@@ -809,11 +869,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .profile-button:hover {
+  color: white;
   opacity: .9;
+  text-decoration: none;
 }
 
 .profile-button-text {
   font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .profile-currency {

@@ -24,13 +24,19 @@ class Card extends Component {
                     <div className="card-info-GE">
                         <h3 className="card-name-GE">
                             <span>{
+                                name && (
                                 name[0].toUpperCase()+name.slice(1, name.indexOf(" "))
                                 + " " 
                                 + name[name.indexOf(" ")+1].toUpperCase()+name.slice(name.indexOf(" ")+2)
+                                )
                             }</span>
                             <span className="card-price-GE">{currency.toUpperCase()} ${hourPrice}/h</span>
                         </h3>
-                        <h4 className="card-job-GE">{job[0].toUpperCase()+job.slice(1)}</h4>
+                        <h4 className="card-job-GE">{
+                        job && (   
+                            job[0].toUpperCase()+job.slice(1)
+                            )
+                        }</h4>
                         <span className="card-rating-GE"><RatingStars rating={rating} /></span>
 
                         <p className="card-description-GE">
