@@ -651,9 +651,10 @@ body::-webkit-scrollbar-thumb {
 
 .login-container-button{
   display: flex;
+  height: 100vh;
   flex-direction: column;
-  padding: 4rem;
   justify-content: center;
+  margin-top: -5rem;
   align-items: center;
 }
 
@@ -761,6 +762,7 @@ body::-webkit-scrollbar-thumb {
 .send-request-success {
   text-align: center;
   color: green;
+  height: 100vh;
   font-weight: 600;
   font-size: 1.5rem;
 }
