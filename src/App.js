@@ -1,21 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import './App.css';
+
+import NavBar from "./Components/NavBar/NavBar";
+import Footer from "./Components/Footer/Footer";
 
 import HomePage from "./Components/HomePage/HomePage";
-import './App.css';
-import Footer from "./Components/Footer/Footer";
-import NavBar from "./Components/NavBar/NavBar";
-import AboutUsPage from "./Components/AboutUsPage/AboutUsPage";
 import ServicesPage from "./Components/ServicesPage/ServicesPage";
-
-import SignupUser from "./Components/Signup/SignupUser";
-import SignupProfessional from "./Components/Signup/SignupProfessional";
+import AboutUsPage from "./Components/AboutUsPage/AboutUsPage";
+import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
 
 import Login from "./Components/Login/Login";
 import LoginUser from "./Components/Login/LoginUser";
 import LoginProfessional from "./Components/Login/LoginProfessional";
-import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
+import SignupUser from "./Components/Signup/SignupUser";
+import SignupProfessional from "./Components/Signup/SignupProfessional";
+
+
+
+
 /* import Favs from "./Favs/Favs"; */
 
 export default class App extends React.Component {
