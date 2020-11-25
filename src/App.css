@@ -280,32 +280,27 @@ body::-webkit-scrollbar-thumb {
 
 .footer-title h6 {
   color: orange;
-  text-shadow: 0 0 3px;
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
+  opacity: .8;
 }
 
 /* ABOUTUSPAGE styles*/
 
 .aboutUs-container {
-  margin-top: 14vh;
   margin: auto;
-}
-
-.aboutUs-container p {
-  font-size: 1.2rem;
+  margin-bottom: 10rem;
 }
 
 .aboutUs-container h2 {
-  margin-top: 6rem;
+  
 }
 
 .aboutUs-container p.our-description {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
   text-align: justify;
   line-height: 2rem;
+  margin: auto;
 }
 
 .aboutUs-container p.address {
@@ -319,64 +314,111 @@ body::-webkit-scrollbar-thumb {
 }
 
 .aboutUs-nosotros {
-  background-color: rgb(238, 182, 0);
+  height: 100vh;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.aboutus-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+  text-align: center;
 }
 
 .aboutUs-movv{
-  color: rgba(253, 238, 208, 0.938);
-  background-color: red;
+  background-image: url("./assets/fondo-aboutus.png");
+  background-color: white;
+  color: white;
+  height: 100vh;
+  padding-top: 6rem;
+  width: auto;
+}
 
-  /* box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.068); */
+.aboutus-container {
+  color: rgba(253, 238, 208, 0.938);
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
+  row-gap: 3rem;
+  max-width: 1024px;
+  margin: auto;
+  text-align: center;
+}
 
+.aboutus-movv-title {
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .aboutUs-info-card{
-  margin-bottom: 30px;
-  width: 60%;
-  align-items: center;
-
+  margin: auto;
+  text-align: justify;
+  width: 80%;
 }
 
+.aboutus-equipo {
+  padding-top: 6rem;
+  height: 100vh;
+}
 
-.equipo-conteiner {
+.equipo-title {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.equipo-container {
   display: flex;
-  padding: 12px;
-  flex-flow: row wrap;
-  flex-direction: row;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .equipo-integrante{
-  flex: 1;
-  margin: 0px 8px;
   display: flex;
   min-height: 350px;
   flex-direction: column;
+  width: 220px;
 }
+
+.equipo-contenedor-img {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .equipo-imagen {
-  width: 215px;
+  border-radius: 5px;
   height: auto;
   margin: 0px auto;
+  width: 90%;
 }
+
 .integrante-info {
   margin: 8px auto 32px auto;
 }
 
 .integrante-nombre {
   color: orange;
-  padding: 0px 8px;
-  font-size: 1.1em;
-  margin-top: 0px;
+  font-size: 1.5em;
+  margin-top: .5rem;
   text-align: center;
 }
-.integrante-puesto , .integrante-descripcion {
+
+.integrante-puesto {
+  color: rgba(192, 192, 192, 0.637);
+  font-size: 1rem;
+  margin-top: -.5rem;
+  text-align: center;
+}
+
+.integrante-descripcion {
   color: white;
-  padding: 0px 8px;
-  font-size: .9em;
-  margin-top: 0px;
+  font-size: 1em;
+  margin-top: 1.5rem;
   text-align: center;
   text-transform: initial;
 }
@@ -961,7 +1003,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .testimonial-subtitle-main {
-  color: silver;
+  color: gray;
   font-size: 1.3rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -1008,7 +1050,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .testimonial-description {
-  color: silver;
+  color: grey;
   font-size: 1rem;
 }
 
@@ -1025,7 +1067,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .testimonial-location {
-  color: silver;
+  color: grey;
 }
 
 .testimonial-state {

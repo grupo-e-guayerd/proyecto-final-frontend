@@ -109,7 +109,7 @@ export default class SignupProfessional extends React.Component {
                             />
                             <label className="signup-label">Ingresa la URL de tu foto</label>
                             <input 
-                                type="text" 
+                                type="url" 
                                 className="signup-input" 
                                 placeholder="URL de la imagen" 
                                 name="imgUrl" 

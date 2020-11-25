@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import RatingStars from '../RatingStars/RatingStars';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default class ProfessionalCard extends Component {
 
@@ -9,12 +11,16 @@ export default class ProfessionalCard extends Component {
         this.props.loadData(data);
     }
 
+    componentDidMount() {
+        Aos.init({duration: 2000});
+    }
+
     render() {
         let { imgUrl, name, currency, hourPrice, job, rating, description, isFavorite } = this.props;
         return (
             <>
                 {/* CARD COMPONENT */}
-                <div className="card-GE">
+                <div data-aos="fade-up" className="card-GE">
                     {/* CARD IMAGE */}
                     <div className="card-img-container-GE">
                         <img src={imgUrl} alt="worker" className="card-img-GE" />
