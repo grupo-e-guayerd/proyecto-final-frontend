@@ -20,12 +20,11 @@ export default class App extends React.Component {
 
 
 	constructor() {
-		super();
-		
-        this.state = {
-            professionalData:{}
-        }
+		super();	
+    this.state = {
+      professionalData:{}
     }
+  }
 
 	loadData = (data) => {
 		this.setState({professionalData:data});
@@ -49,15 +48,15 @@ export default class App extends React.Component {
             <Route exact path="/signupProfessional"><SignupProfessional /></Route>
             <Route exact path="/perfil">
             	<ProfessionalProfile
-					name={this.state.professionalData.name}
-					imgUrl={this.state.professionalData.imgUrl}
-					currency={this.state.professionalData.currency}
-					hourPrice={this.state.professionalData.hourPrice}
-					job={this.state.professionalData.job}
-					rating={this.state.professionalData.rating}
-					description={this.state.professionalData.description}
-					zone={this.state.professionalData.zone}
-            	/>
+                name={this.state.professionalData.name}
+                imgUrl={this.state.professionalData.imgUrl}
+                currency={this.state.professionalData.currency}
+                hourPrice={this.state.professionalData.hourPrice}
+                job={this.state.professionalData.job}
+                rating={this.state.professionalData.rating}
+                description={this.state.professionalData.description}
+                zone={this.state.professionalData.zone}
+              />
             </Route>
 
             {/* TODO */}
