@@ -5,6 +5,7 @@ import Federico from "../../assets/federico.jpg";
 import Guido from "../../assets/guido.jpeg";
 import Nahuel from "../../assets/nahuel.jpg";
 import Carmen from "../../assets/carmen.jpeg";
+import Matias from "../../assets/matias.jpg";
 import ButtonUp from "../ButtonUp/ButtonUp";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -108,7 +109,7 @@ export default class AboutUsPage extends Component
                         
                             <div className="equipo-integrante">
                                 <div className="equipo-contenedor-img">
-                                    <img src={Federico} alt="worker" className="equipo-imagen" />
+                                    <img src={Matias} alt="worker" className="equipo-imagen" />
                                 </div>
                                 <div className="integrante-info">
                                     <h3 className="integrante-nombre">Matias Aquino</h3>
