@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Imagen from "../../assets/tratohecho.jpg";
 import Federico from "../../assets/federico.jpg";
 import Guido from "../../assets/guido.jpeg";
+import Nahuel from "../../assets/nahuel.jpg";
+import Carmen from "../../assets/carmen.jpeg";
 import ButtonUp from "../ButtonUp/ButtonUp";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -118,7 +120,7 @@ export default class AboutUsPage extends Component
                             </div>
                             <div className="equipo-integrante">
                                 <div className="equipo-contenedor-img"> 
-                                    <img src={Federico} alt="worker" className="equipo-imagen" />
+                                    <img src={Nahuel} alt="worker" className="equipo-imagen" />
                                 </div>
                                 <div className="integrante-info">
                                     <h3 className="integrante-nombre">Nahuel Trucco</h3>
@@ -142,7 +144,7 @@ export default class AboutUsPage extends Component
                             </div>
                             <div className="equipo-integrante">
                                 <div className="equipo-contenedor-img"> 
-                                    <img src={Federico} alt="worker" className="equipo-imagen" />
+                                    <img src={Carmen} alt="worker" className="equipo-imagen" />
                                 </div>
                                 <div className="integrante-info">
                                     <h3 className="integrante-nombre">Carmen Quispe</h3>
@@ -155,17 +157,11 @@ export default class AboutUsPage extends Component
 
                         </div>
                     </div>
-                    
-
-
-
                         {/*       <h2>Dirección</h2>
                         <p className="address">
                             Av. Patricio Peralta Ramos 3532, 7600, Mar del Plata, Buenos Aires.
                         </p>
                         <GoogleMap /> */}
-
-
                 </div>
             </>
 
