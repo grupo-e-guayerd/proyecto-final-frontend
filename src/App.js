@@ -15,7 +15,6 @@ import Login from "./Components/Login/Login";
 import LoginUser from "./Components/Login/LoginUser";
 import LoginProfessional from "./Components/Login/LoginProfessional";
 import ProfessionalProfile from "./Components/ProfessionalProfile/ProfessionalProfile";
-import Favs from "./Favs/Favs";
 
 export default class App extends React.Component {
 
@@ -45,7 +44,7 @@ export default class App extends React.Component {
 
             <Route exact path="/signupUser"><SignupUser /></Route>
             <Route exact path="/signupProfessional"><SignupProfessional /></Route>
-            <Route exact path="/favoritos"><Favs /></Route>
+            <Route exact path="/favoritos"></Route>
             <Route exact path="/perfil">
             	<ProfessionalProfile
                 _id={this.state.professionalData._id}
