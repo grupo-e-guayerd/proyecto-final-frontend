@@ -384,6 +384,12 @@ body::-webkit-scrollbar-thumb {
   width: 220px;
 }
 
+.equipo-contenedor-img {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .equipo-imagen {
   border-radius: 5px;
   height: auto;
