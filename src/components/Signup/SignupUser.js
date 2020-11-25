@@ -2,6 +2,10 @@ import React from "react";
 
 export default class SignupUser extends React.Component {
 
+
+    normalizeString = (string)=>{return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}
+
+
     render(){
         return(
             <form className="signup-user"> 

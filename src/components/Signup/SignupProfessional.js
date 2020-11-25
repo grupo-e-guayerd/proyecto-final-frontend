@@ -34,7 +34,7 @@ export default class SignupProfessional extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         const OBJ_NEWPRO = { 
-            name: this.state.name,
+            name: this.normalizeString(this.state.name),
             dni: this.state.dni,
             email: this.state.email,
             phone:this.state.phone,
@@ -79,6 +79,7 @@ export default class SignupProfessional extends React.Component {
         .then( jsonZones => {this.setState({zones : jsonZones})} )
         .catch( error => console.log(error))
     }
+    normalizeString = (string)=>{return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}
 
     componentDidMount(){
         this.getCategories()
@@ -138,7 +139,7 @@ export default class SignupProfessional extends React.Component {
                             <input 
                                 type="number" 
                                 className="signup-input" 
-                                placeholder="11111111" 
+                                placeholder="(+54 11 ........... )" 
                                 name="phone" 
                                 value={phone} 
                                 onChange={this.handleChange}

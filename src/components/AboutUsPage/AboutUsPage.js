@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GoogleMap from "../GoogleMap/GoogleMap";
+/* import GoogleMap from "../GoogleMap/GoogleMap"; */
 import Imagen from "../../assets/tratohecho.jpg";
 import Federico from "../../assets/federico.jpg";
 
@@ -113,6 +113,16 @@ export default class AboutUsPage extends Component
                                 <img src={Federico} alt="worker" className="equipo-imagen" />
                                 <div className="integrante-info">
                                     <h3 className="integrante-nombre">Guido Alferez</h3>
+                                    <h4 className="integrante-puesto">Lorem ipsum </h4>
+                                    <p className="integrante-descripcion">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="equipo-integrante">
+                                <img src={Federico} alt="worker" className="equipo-imagen" />
+                                <div className="integrante-info">
+                                    <h3 className="integrante-nombre">Carmen Quispe</h3>
                                     <h4 className="integrante-puesto">Lorem ipsum </h4>
                                     <p className="integrante-descripcion">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

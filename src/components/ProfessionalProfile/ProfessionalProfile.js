@@ -10,8 +10,23 @@ class ProfessionalProfile extends Component {
         }
     }
 
+    /* sendProfile = () => {
+
+
+        fetch("https://api-servi-oficios.herokuapp.com/hiredservice", {
+            method: "POST",
+            body: JSON.stringify(OBJ_NEWPRO),
+            headers: {"Content-Type": "application/json"}
+        })
+        .then(response => response.json())
+        .then(professional => {
+            this.setState({send: true})
+        })
+        .catch(error => console.log(error))
+    }
+ */
     componentDidMount(){
-        fetch("http://localhost:3001/mercadopago")
+        fetch("https://api-servi-oficios.herokuapp.com/mercadopago")
         .then( response => response.json())
         .then(data => {
             console.log(data)
@@ -50,7 +65,6 @@ class ProfessionalProfile extends Component {
                         <a 
                         className="profile-button"
                         href={this.state.init_point}
-                        /* target= "_blank"  */
                         >
                             <span className="profile-button-text">CONTRATAR DESDE</span>
                             <span className="profile-currency">{currency}</span>

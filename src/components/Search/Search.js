@@ -40,16 +40,18 @@ export default class Search extends React.Component
                     <option value="names/" className="search-option">Profesional</option>
                     <option value="zones/" className="search-option">Zona</option>
                 </select>
+                
                 <input 
                     className="search-input"
                     name="search"
-                    suggestions="suggestions"
+                    list="suggestions"
                     placeholder={this.props.placeholder || "Realizá una busqueda"}
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     onChange={this.changeHandler}
                     value={this.state.search}
                     autofocus="on"
+     
                 />
 
                 {/* TODO */}
