@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default class SideBar extends Component
 {
     clickHandler = (event)=>{ this.props.searchHandler("jobs/", event.target.name) }
+
+    componentDidMount() {
+        Aos.init({duration: 2000});
+    }
 
     render() {
         let { categoryArray, arrayWorkers } = this.props;
@@ -28,6 +34,7 @@ export default class SideBar extends Component
                         auxArrayWorkers = arrayWorkers.filter( worker => { return worker.job === category} );
                         return (
                             <button 
+                                data-aos="fade-up"
                                 key={arrayObject._id} 
                                 name={category}
                                 className="sidebar-button"

@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import Imagen from "../../assets/tratohecho.jpg";
 import Federico from "../../assets/federico.jpg";
 import ButtonUp from "../ButtonUp/ButtonUp";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default class AboutUsPage extends Component
 {
@@ -22,6 +23,9 @@ export default class AboutUsPage extends Component
         .then(response=>response.json())
         .then(jsonString=>{this.setState({ourDescription: jsonString})})
         .catch(error=>{ /* TODO chatch handler */ });
+
+        // ANIMATION
+        Aos.init({duration: 2000});
     }
 
     render() {
@@ -39,8 +43,8 @@ export default class AboutUsPage extends Component
             
                 <div className="aboutUs-container">
                     
-                    <div className="aboutUs-nosotros">
-                        <h3>Quíenes somos</h3>
+                    <div data-aos="fade-up" className="aboutUs-nosotros">
+                        <h3 className="aboutus-title" >Quíenes somos</h3>
                         <p className="our-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula.
                             <br></br>
@@ -50,35 +54,41 @@ export default class AboutUsPage extends Component
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. Sed quis velit in libero cursus congue. Integer viverra viverra enim consequat convallis. Suspendisse id mauris rutrum, rutrum odio a, pretium urna. Proin dictum id quam sed laoreet. Curabitur volutpat urna justo, sit amet egestas risus cursus egestas. Nullam eget turpis tempor, vehicula urna in, porta ligula. Proin efficitur lacinia elit, sit amet dapibus nulla fringilla sit amet. Aliquam quis convallis purus. Aliquam mollis ac augue non sodales. Curabitur suscipit tristique diam eget maximus. Duis ut metus sit amet nulla laoreet volutpat.
                             <br></br>
                         </p>
+                        <p className="our-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. Sed quis velit in libero cursus congue. Integer viverra viverra enim consequat convallis. Suspendisse id mauris rutrum, rutrum odio a, pretium urna. Proin dictum id quam sed laoreet.
+                            <br></br>
+                        </p>
                     </div>
                     
                     <div className="aboutUs-movv">
-                        <div className="aboutUs-info-card">
-                            <h3 >Misión</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
-                        </div>
-                        
-                        
-                        <div className="aboutUs-info-card">
-                            <h3 >Visión</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
-                        </div>
-                        
-                        <div className="aboutUs-info-card">
-                            <h3 >Objetivos</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
-                        </div>
-                        
-                        <div className="aboutUs-info-card">
-                            <h3 >Valores</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
+                        <div data-aos="fade-up" className="aboutus-container">
+                            <div className="aboutUs-info-card">
+                                <h3 className="aboutus-movv-title">Misión</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
+                            </div>
+                            
+                            
+                            <div className="aboutUs-info-card">
+                                <h3 className="aboutus-movv-title">Visión</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
+                            </div>
+                            
+                            <div className="aboutUs-info-card">
+                                <h3 className="aboutus-movv-title">Objetivos</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
+                            </div>
+                            
+                            <div className="aboutUs-info-card">
+                                <h3 className="aboutus-movv-title">Valores</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et sem non nisi suscipit pharetra et at turpis. Morbi efficitur mollis finibus. Donec condimentum est purus. Vestibulum eget fermentum ligula. </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <h2>Nuestro equipo</h2>
+                    <div data-aos="fade-up" className="aboutus-equipo">
+                        <h2 className="equipo-title">Nuestro equipo</h2>
                        
-                        <div className="equipo-conteiner"> 
+                        <div className="equipo-container"> 
 
                             <div className="equipo-integrante">
                                 <img src={Federico} alt="worker" className="equipo-imagen" />
