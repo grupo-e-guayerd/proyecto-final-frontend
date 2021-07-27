@@ -18,12 +18,12 @@ export default class Search extends React.Component
     search = ()=>{this.props.searchHandler(this.state.subjectSearch, this.state.search)}
 
     componentDidMount() {
-        fetch(`https://api-servi-oficios.herokuapp.com/categories`)
+        fetch(`http://localhost:3001/categories`)
         .then( reponse => reponse.json() )
         .then( jsonResponse => { this.setState({categoryArray: jsonResponse}) } )
         .catch( error => { /* TODO catch handler */ } )
 
-        fetch(`https://api-servi-oficios.herokuapp.com/zones`)
+        fetch(`http://localhost:3001/zones`)
         .then( reponse => reponse.json() )
         .then( jsonResponse => { this.setState({zonesArray: jsonResponse}) } )
         .catch( error => { /* TODO catch handler */ } )
